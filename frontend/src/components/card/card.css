@@ -6,9 +6,10 @@
   width: 100%;
 }
 .header {
+  display: flow-root;
+  flex-direction: start;
+  text-align: start;
   padding: 30px;
-  width: 100%;
-  margin-left: 810px;
   line-height: 20px;
 }
 .sideHeading {
@@ -23,6 +24,8 @@
 }
 .cards {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .cardItem {
   margin: 0px 20px;
