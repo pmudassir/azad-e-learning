@@ -39,19 +39,19 @@
   width: 150px;
   flex: 1;
   transition: all 0.3s ease;
+  overflow: hidden;
 }
 .cardItem::before {
   content: "";
   position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 10px;
-  height: 10px;
-  background-color: rgb(27, 25, 25);
-  border: 2px solid rgb(189, 187, 187);
-  border-radius: 50%;
+  top: -20px;
+  left: -20px;
+  width: 40px;
+  height: 40px;
+  background-color: rgb(4, 242, 4);
   opacity: 0;
   transition: opacity 0.2s ease-in-out;
+  transform: rotate(45deg);
 }
 
 .cardItem:hover::before {
