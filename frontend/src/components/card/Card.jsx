@@ -6,30 +6,29 @@ const cardData = [
     id: 1,
     title: "Foundation Programs",
     imageUrl:
-      "https://img.icons8.com/external-smashingstocks-hand-drawn-black-smashing-stocks/198/1A1A1A/external-alphabet-education-smashingstocks-hand-drawn-black-smashing-stocks.png",
+      "https://img.icons8.com/external-smashingstocks-hand-drawn-color-smashing-stocks/100/external-Abacus-education-smashingstocks-hand-drawn-color-smashing-stocks.png",
   },
   {
     id: 2,
     title: "Pre-Primary TTC",
-    imageUrl:
-      "https://img.icons8.com/external-icongeek26-outline-icongeek26/128/1A1A1A/external-teacher-physics-icongeek26-outline-icongeek26.png",
+    imageUrl: "https://i.ibb.co/MpCD2wf/teacher-5190740.png",
   },
   {
     id: 3,
     title: "Montessori <br/> TTC",
     imageUrl:
-      "https://img.icons8.com/external-sbts2018-outline-sbts2018/117/1A1A1A/external-training-lean-thinking-sbts2018-outline-sbts2018.png",
+      "https://img.icons8.com/external-justicon-lineal-color-justicon/128/external-business-presentation-back-to-school-justicon-lineal-color-justicon.png",
   },
   {
     id: 4,
-    title: "Hindi Teacher's Courses",
-    imageUrl: "https://i.ibb.co/stj48kH/hindilink.png",
+    title: "Hindi <br/> TTC",
+    imageUrl: "https://i.ibb.co/PhdRvqr/hindi.png",
   },
   {
     id: 4,
     title: "Competitive Goals",
     imageUrl:
-      "https://img.icons8.com/external-goofy-line-kerismaker/192/1A1A1A/external-Goals-business-goofy-line-kerismaker.png",
+      "https://img.icons8.com/external-goofy-flat-kerismaker/192/external-Goals-business-goofy-flat-kerismaker.png",
   },
 ];
 
