@@ -6,7 +6,7 @@ const cardData = [
   {
     id: 1,
     title: "Foundation Programs",
-    link: "/courses",
+    link: "/course",
     imageUrl:
       "https://img.icons8.com/external-smashingstocks-hand-drawn-color-smashing-stocks/100/external-Abacus-education-smashingstocks-hand-drawn-color-smashing-stocks.png",
   },
