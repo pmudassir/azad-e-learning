@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../../components/navbar/Navbar";
 import "./course.css";
+import Footer from "../../components/footer/Footer";
 
 const courseData = [
   {
@@ -127,6 +128,7 @@ const Course = () => {
           ))}
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
