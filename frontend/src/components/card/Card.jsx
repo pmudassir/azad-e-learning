@@ -48,7 +48,7 @@ const Card = () => {
       <div className="cards">
         {cardData.map((item) => (
           <div className="cardItem" key={item.id}>
-            <Link to={item.link} style={{textDecoration:"none",color:"black"}}>
+            <Link to={item.link} style={{ textDecoration: "none", color: "black" }}>
               <div className="cardItemContent">
                 <img
                   width="95"
