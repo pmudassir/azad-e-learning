@@ -27,11 +27,11 @@ const Footer = () => {
               <li>Blog</li>
               <li>All Courses</li>
               <li>App Login</li>
+              <li>About us</li>
               <li>Refund Policy</li>
               <li>Contact Us</li>
-              <li>Shipping Policy</li>
               <li>Privacy policy</li>
-              <li>About us</li>
+              <li>Shipping Policy</li>
               <li>Terms of service</li>
             </ul>
           </div>
