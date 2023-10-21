@@ -21,6 +21,7 @@
   margin: 20px;
   border-radius: 10px;
   box-shadow: 2px 4px 10px -2px #9a9a9a;
+  background-color: #f8fff8af;
 }
 .courseSubject {
   text-align: center;
@@ -35,36 +36,51 @@
 }
 
 .course {
-  background-color: #fff;
-  padding: 10px;
-  margin: 10px;
+  margin: 15px;
   border: 1px solid #ccc;
   border-radius: 5px;
   text-align: center;
   flex-direction: column;
-
+  border-radius: 5%;
+  overflow: hidden;
   transition: background-color 0.2s;
   width: 400px;
+  transition: all 0.3s ease;
 }
-
 .course:hover {
-  background-color: #f3f3f3;
+  transform: scale(1.08);
+  background-color: white;
 }
-
 .courseLevel {
-  text-align: center;
+  text-align: start;
+  margin-bottom: 10px;
   font-size: 20px;
 }
-.courseImage {
-  width: 100%;
-  height: auto;
-  object-fit: fill;
-  flex-direction: column;
+.features {
+  /* width: 100%; */
+  padding: 10px;
 }
-button {
-  border-radius: 20%;
+.courseImage {
+  object-fit: contain;
+  height: 60%;
+}
+.courseDescription {
+  text-align: start;
+  font-size: medium;
+}
+.button {
+  border-radius: 5%;
   height: 40px;
+  justify-content: end;
+  align-items: end;
+  padding: 10px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  margin: 10px;
+  background-color: rgb(5, 191, 89);
   color: white;
-  background-color: rgb(5, 191, 191);
-  font-weight: 600;
+}
+.button:hover {
+  background-color: rgb(7, 127, 61);
 }
