@@ -13,20 +13,20 @@ const cardData = [
   {
     id: 2,
     title: "Pre-Primary TTC",
-    link: "/",
+    link: "/ppttc",
     imageUrl: "https://i.ibb.co/MpCD2wf/teacher-5190740.png",
   },
   {
     id: 3,
     title: "Montessori <br/> TTC",
-    link: "/",
+    link: "/mttc",
     imageUrl:
       "https://img.icons8.com/external-justicon-lineal-color-justicon/128/external-business-presentation-back-to-school-justicon-lineal-color-justicon.png",
   },
   {
     id: 4,
     title: "Hindi <br/> TTC",
-    link: "/",
+    link: "/httc",
     imageUrl: "https://i.ibb.co/PhdRvqr/hindi.png",
   },
   {
