@@ -40,7 +40,7 @@ const cardData = [
 
 const Card = () => {
   return (
-    <div className="container">
+    <div className="cardContainer">
       <div className="header">
         <span className="sideHeading">Ready To Learn?</span>
         <h1 className="heading">Featured Courses</h1>
