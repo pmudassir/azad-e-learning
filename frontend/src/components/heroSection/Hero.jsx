@@ -3,18 +3,13 @@ import './hero.css';
 
 const Hero = () => {
     return (
-        <div className='hero-container'>
+        <div className="hero">
             <div className="hero-left">
-                <h1 className='header'>Kerala's Best<br />E - Learning Platform</h1>
-                <span className='tagline'>"Any time - Anywhere"</span>
+                <h1>Kerala's Best <br /> E-Learning <br /> Platform</h1>
+                <p>Any time, Anywhere</p>
             </div>
             <div className="hero-right">
-                <img
-                    src="/images/Hero.jpg"
-                    alt="Hero"
-                    className='imageHero'
-                    style={{ width: '100%', height: 'auto' }}
-                />
+                <img src="/images/Hero.jpg" alt="Hero" />
             </div>
         </div>
     );
