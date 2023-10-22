@@ -75,10 +75,9 @@ const Form = () => {
                 value={district}
                 onChange={(e) => setDistrict(e.target.value)}
                 required
+                placeholder="Your District"
               >
-                <option value="districts" unselectable="district" color="green">
-                  Your District
-                </option>
+              <option autoFocus>Your District</option>
                 <option value="Thiruvananthapuram">Thiruvananthapuram</option>
                 <option value="Kollam">Kollam</option>
                 <option value="Pathanamthitta">Pathanamthitta</option>
@@ -105,3 +104,4 @@ const Form = () => {
 };
 
 export default Form;
+// request test

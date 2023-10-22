@@ -63,7 +63,7 @@ input[type=submit]:hover {
     background-color: #45a049;
   }
 
-input[type=text],input[type=number],input[type=email], select, textarea {
+input[type=text],input[type=number],input[type=email], select{
     margin: 5px;
     width: 90%;
     padding: 12px;
