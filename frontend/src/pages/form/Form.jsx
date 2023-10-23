@@ -33,7 +33,7 @@ const Form = () => {
     <div>
       <Navbar />
       <div className="formContainer">
-        <div className="formItem">
+        <div className="formItem"> 
           <form onSubmit={handleSubmit}>
             <div className="sessionType">
               <input
@@ -50,49 +50,69 @@ const Form = () => {
               />
             </div>
             <h4>Enter your details</h4>
-            <div className="detailInputs">
-              <input
-                type="text"
-                placeholder="Your Name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-              />
-              <input
-                type="email"
-                placeholder="Email Address"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-              <input
-                type="number"
-                placeholder="Mobile Number"
-                value={mobileNumber}
-                onChange={(e) => setMobileNumber(e.target.value)}
-              />
-              <select
-                name="district"
-                id="district"
-                value={district}
-                onChange={(e) => setDistrict(e.target.value)}
-                required
-                placeholder="Your District"
-              >
-              <option autoFocus>Your District</option>
-                <option value="Thiruvananthapuram">Thiruvananthapuram</option>
-                <option value="Kollam">Kollam</option>
-                <option value="Pathanamthitta">Pathanamthitta</option>
-                <option value="Alappuzha">Alappuzha</option>
-                <option value="Kottayam">Kottayam</option>
-                <option value="Idukki">Idukki</option>
-                <option value="Ernakulam">Ernakulam</option>
-                <option value="Thrissur">Thrissur</option>
-                <option value="Palakkad">Palakkad</option>
-                <option value="Malappuram">Malappuram</option>
-                <option value="Kozhikode">Kozhikode</option>
-                <option value="Wayanad">Wayanad</option>
-                <option value="Kannur">Kannur</option>
-                <option value="Kasaragod">Kasaragod</option>
-              </select>
+            <div className="detailItems">
+              <div className="detailsItem">
+                <label htmlFor="text">
+                  Name<span>*</span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="Your Name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                />
+              </div>
+              <div className="detailsItem">
+                <label htmlFor="email">
+                  Email<span>*</span>
+                </label>
+                <input
+                  type="email"
+                  placeholder="Email Address"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </div>
+              <div className="detailsItem">
+                <label htmlFor="tel">
+                  Phone Number<span>*</span>
+                </label>
+                <input
+                  type="tel"
+                  placeholder="Mobile Number"
+                  pattern="[0-9]{10}"
+                  value={mobileNumber}
+                  onChange={(e) => setMobileNumber(e.target.value)}
+                />
+              </div>
+              <div className="detailsItem">
+                <label htmlFor="text">
+                  District<span>*</span>
+                </label>
+                <select
+                  name="district"
+                  id="district"
+                  value={district}
+                  onChange={(e) => setDistrict(e.target.value)}
+                  required
+                >
+                  <option autoFocus>Select District</option>
+                  <option value="Thiruvananthapuram">Thiruvananthapuram</option>
+                  <option value="Kollam">Kollam</option>
+                  <option value="Pathanamthitta">Pathanamthitta</option>
+                  <option value="Alappuzha">Alappuzha</option>
+                  <option value="Kottayam">Kottayam</option>
+                  <option value="Idukki">Idukki</option>
+                  <option value="Ernakulam">Ernakulam</option>
+                  <option value="Thrissur">Thrissur</option>
+                  <option value="Palakkad">Palakkad</option>
+                  <option value="Malappuram">Malappuram</option>
+                  <option value="Kozhikode">Kozhikode</option>
+                  <option value="Wayanad">Wayanad</option>
+                  <option value="Kannur">Kannur</option>
+                  <option value="Kasaragod">Kasaragod</option>
+                </select>
+              </div>
               <input type="submit" value="Submit" />
             </div>
           </form>
