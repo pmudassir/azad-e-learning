@@ -64,7 +64,7 @@ const Course = () => {
     return (
         <div>
             <Navbar />
-            <div className="container">
+            <div className="courseContainer">
                 <div className="header">
                     <h5>Main Focus</h5>
                 </div>
