@@ -33,7 +33,7 @@ const Form = () => {
     <div>
       <Navbar />
       <div className="formContainer">
-        <div className="formItem"> 
+        <div className="formItem">
           <form onSubmit={handleSubmit}>
             <div className="sessionType">
               <input
@@ -113,8 +113,8 @@ const Form = () => {
                   <option value="Kasaragod">Kasaragod</option>
                 </select>
               </div>
-              <input type="submit" value="Submit" />
             </div>
+            <input type="submit" value="Submit" />
           </form>
         </div>
       </div>
@@ -124,4 +124,3 @@ const Form = () => {
 };
 
 export default Form;
-// request test
