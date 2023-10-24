@@ -23,16 +23,16 @@ const Footer = () => {
           </div>
           <div className="right">
             <ul className="list">
-              <li>Our Team</li>
-              <li>Blog</li>
-              <li>All Courses</li>
-              <li>App Login</li>
-              <li>About us</li>
-              <li>Refund Policy</li>
-              <li>Contact Us</li>
-              <li>Privacy policy</li>
-              <li>Shipping Policy</li>
-              <li>Terms of service</li>
+              <li><a href="/">Our Team</a></li>
+              <li><a href="/">Blog</a></li>
+              <li><a href="/">All Courses</a></li>
+              <li><a href="/">App Login</a></li>
+              <li><a href="/">About us</a></li>
+              <li><a href="/">Refund Policy</a></li>
+              <li><a href="/">Contact Us</a></li>
+              <li><a href="/">Privacy policy</a></li>
+              <li><a href="/">Shipping Policy</a></li>
+              <li><a href="/">Terms of service</a></li>
             </ul>
           </div>
         </div>

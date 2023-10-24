@@ -113,3 +113,8 @@ hr {
   padding: 5px 0 15px;
   font-size: 13px;
 }
+
+a{
+  text-decoration: none;
+  color: #2c234d;
+}
