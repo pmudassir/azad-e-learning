@@ -32,7 +32,7 @@ const cardData = [
   {
     id: 4,
     title: "Competitive Goals",
-    link: "/",
+    link: "/competitive-goals",
     imageUrl:
       "https://img.icons8.com/external-goofy-flat-kerismaker/192/external-Goals-business-goofy-flat-kerismaker.png",
   },

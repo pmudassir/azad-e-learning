@@ -1,0 +1,84 @@
+.goalsContainer {
+  margin: 200px;
+}
+
+.goalsCards {
+    margin: 50px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.goalsCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px;
+  box-shadow: 2px 4px 10px -2px #9a9a9a;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.goalsCard &:nth-child(2n + 1) {
+  flex-direction: row-reverse;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.normal {
+  flex-direction: row; /* Normal order: left, then right */
+}
+
+.reversed {
+  flex-direction: row-reverse; /* Reversed order: right, then left */
+}
+
+.left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  position: relative;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.goalsImage {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  opacity: 0.4;
+}
+
+.enrollButton {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 10px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 20px;
+}
+
+.details {
+  padding-left: 10px;
+  text-align: start;
+  color: grey;
+}
+h2 {
+    color: #2c234d;
+  padding-bottom: 30px;
+}
