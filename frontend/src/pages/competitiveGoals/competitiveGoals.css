@@ -1,9 +1,18 @@
 .goalsContainer {
-  margin: 200px;
+  margin: 60px;
+}
+
+.goalsHeder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 50px;
+
 }
 
 .goalsCards {
-    margin: 50px;
+  margin: 10px 200px 150px 200px;
   display: grid;
   align-items: center;
   justify-content: center;
@@ -56,7 +65,7 @@
   max-width: 100%;
   height: auto;
   object-fit: cover;
-  opacity: 0.4;
+  opacity: 0.6;
 }
 
 .enrollButton {
@@ -79,6 +88,6 @@
   color: grey;
 }
 h2 {
-    color: #2c234d;
+  color: #2c234d;
   padding-bottom: 30px;
 }
