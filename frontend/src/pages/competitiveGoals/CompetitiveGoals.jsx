@@ -47,7 +47,7 @@ const CompetitiveGoals = () => {
       <Navbar />
       <div className="goalsContainer">
       <div className="goalsHeder">
-        
+        <h1>Competitive Goals</h1>
       </div>
         <div className="goalsCards">
           {goalsData.map((item, index) => (

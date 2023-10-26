@@ -1,5 +1,4 @@
 footer {
-
   background-color: rgb(122, 203, 122);
   padding: 10px;
   margin-top: 50px;
@@ -21,10 +20,6 @@ footer {
 .left {
   flex: 1;
   align-items: start;
-}
-
-.logo {
-  display: inline;
 }
 
 .socialIcons {
@@ -66,17 +61,6 @@ footer {
 .youtube:hover{
   border-radius: 20%;
   background-color: #f10206;
-}
-
-.logoIcon {
-  height: 60px;
-  width: 60px;
-}
-
-.logoText {
-  height: 65px;
-  width: 65px;
-  margin-left: -9px;
 }
 
 .list {

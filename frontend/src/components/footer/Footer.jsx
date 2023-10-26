@@ -7,9 +7,9 @@ const Footer = () => {
       <div className="footerContainer">
         <div className="footer">
           <div className="left">
-            <div className="logo">
-              <img src="/images/logo1.png" className="logoIcon" alt="logo" />
-              <img src="/images/logo2.png" className="logoText" alt="logoIcon2" />
+            <div className="icon">
+              <img src="/images/logo1.png" className="logo" alt="logo" />
+              <img src="/images/logo2.png" className="logo_text" alt="logoIcon2" />
             </div>
             <div className="contact">
               <div className="socialIcons">
