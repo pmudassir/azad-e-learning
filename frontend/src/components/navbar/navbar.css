@@ -61,16 +61,33 @@
   color: #58a85f;
 }
 
-.avatar {
+.user {
   display: flex;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  object-fit: cover;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.authButton {
+  background-color: transparent;
+  cursor: pointer;
+  border: 1px solid rgb(14, 167, 42);
+  color: white;
+  display: flex;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 3px;
+  transition: background-color 0.3s;
+}
+
+.authButton:hover {
+  background-color: #58a85f;
 }
 
 .avatar-image {
   border-radius: 50%;
+  padding: 10px;
+  width: 30px;
+  height: 30px;
 }
 
 @media (max-width: 768px) {

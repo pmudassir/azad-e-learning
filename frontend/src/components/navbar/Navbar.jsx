@@ -1,7 +1,13 @@
+import { useState } from "react";
 import "./navbar.css";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  const [user, setUser] = useState(true);
+
+  const logout = () => {
+    setUser(false);
+  };
   return (
     <div className="navbar">
       <div className="wrapper">
@@ -18,12 +24,23 @@ const Navbar = () => {
           <li className="item">Courses</li>
           <li className="item">Contact</li>
         </ul>
-        <div className="avatar">
-          <img
-            alt="user-profile"
-            className="avatar-image"
-            src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60"
-          />
+        <div className="user">
+          {user ? (
+            <>
+              <button onClick={logout} className="authButton">
+                Logout
+              </button>
+              <img
+                alt="user-profile"
+                className="avatar-image"
+                src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60"
+              />
+            </>
+          ) : (
+            <Link to={"/auth"}>
+              <button className="authButton">Sign In</button>
+            </Link>
+          )}
         </div>
       </div>
     </div>
