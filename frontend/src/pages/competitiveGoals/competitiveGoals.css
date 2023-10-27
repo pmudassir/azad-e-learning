@@ -28,10 +28,6 @@
   overflow: hidden;
 }
 
-.goalsCard &:nth-child(2n + 1) {
-  flex-direction: row-reverse;
-}
-
 .cardContent {
   display: flex;
   flex-direction: column;
