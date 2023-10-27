@@ -23,7 +23,7 @@ const Auth = () => {
           <div className="inputAuthContainer">
             {isSignUp ? (
               <div className="authInputs">
-              <h2>Sign In</h2>
+                <h2>Sign In</h2>
                 <div className="authInput">
                   <label htmlFor="text">Email:</label>
                   <input className="" type="email" placeholder="Your Email" />
@@ -31,7 +31,7 @@ const Auth = () => {
               </div>
             ) : (
               <div className="authInputs">
-              <h2>Create Account</h2>
+                <h2>Create Account</h2>
                 <div className="authInput">
                   <label htmlFor="text">Name:</label>
                   <input className="" type="" placeholder="" />
@@ -48,7 +48,7 @@ const Auth = () => {
                   <label htmlFor="text">Repeat Password:</label>
                   <input className="" type="" placeholder="" />
                 </div>
-                   <button type="submit">Sign Up</button>
+                <button type="submit">Sign Up</button>
               </div>
             )}
           </div>

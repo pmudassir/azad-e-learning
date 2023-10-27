@@ -8,7 +8,11 @@
   justify-content: center;
   flex-direction: column;
   margin: 50px;
+}
 
+.goalsHeder h1 {
+  color: #2c234d;
+  font-size: 40px;
 }
 
 .goalsCards {
@@ -35,11 +39,11 @@
 }
 
 .normal {
-  flex-direction: row; /* Normal order: left, then right */
+  flex-direction: row;
 }
 
 .reversed {
-  flex-direction: row-reverse; /* Reversed order: right, then left */
+  flex-direction: row-reverse;
 }
 
 .left {
@@ -83,7 +87,40 @@
   text-align: start;
   color: grey;
 }
+
 h2 {
   color: #2c234d;
   padding-bottom: 30px;
+}
+
+.card-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.card:hover .card-hover {
+  opacity: 1;
+}
+
+.enroll-button {
+  font-size: 16px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.arrow {
+  margin-left: 5px;
+  font-size: 20px;
 }

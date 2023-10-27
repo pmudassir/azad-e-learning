@@ -1,67 +1,66 @@
-.authContainer{
+.authContainer {
   display: flex;
   align-items: center;
   justify-content: center;
-  
 }
 
-.authBox{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 50px;
-    box-shadow: 2px 4px 10px -2px #9a9a9a;
-    border-radius: 15px;
+.authBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px;
+  box-shadow: 2px 4px 10px -2px #9a9a9a;
+  border-radius: 15px;
 }
 
-.buttonsContainer{
-    flex: 1;
-    height: 100%;
-    display: flex;
-    background-color: greenyellow;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 10px;
-    border-radius: 5px;
+.buttonsContainer {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  background-color: greenyellow;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 5px;
 }
 
-.authButtons{
-    margin: 10px;
-    padding: 10px 20px;
-    background-color: rgb(124, 178, 124);
-    color: white;
-    border: 1px solid rgb(1, 53, 1);
-    border-radius: 5px;
+.authButtons {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: rgb(124, 178, 124);
+  color: white;
+  border: 1px solid rgb(1, 53, 1);
+  border-radius: 5px;
 }
 
-.toggle{
-    background-color: #3498db;
-    color: #ffffff;
+.toggle {
+  background-color: #3498db;
+  color: #ffffff;
 }
 
-.vertical-line{
-    width: 1px;
-    height: 100%;
-    background-color: black;
-    margin: 0 auto;
+.vertical-line {
+  width: 1px;
+  height: 100%;
+  background-color: black;
+  margin: 0 auto;
 }
 
-.inputAuthContainer{
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 10px;
+.inputAuthContainer {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
 }
 
-.authInputs{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+.authInputs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.authInput{
-    margin: 10px;
+.authInput {
+  margin: 10px;
 }
