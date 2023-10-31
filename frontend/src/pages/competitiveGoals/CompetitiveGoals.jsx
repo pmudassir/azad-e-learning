@@ -46,23 +46,27 @@ const CompetitiveGoals = () => {
     <>
       <Navbar />
       <div className="goalsContainer">
-      <div className="goalsHeder">
-        <h1>Competitive Goals</h1>
-      </div>
+        <div className="goalsHeder">
+          <h1>Competitive Goals</h1>
+        </div>
         <div className="goalsCards">
           {goalsData.map((item, index) => (
             <div className="goalsCard" key={item.id}>
               <div
-                className={`cardContent ${
-                  index % 2 === 0 ? "normal" : "reversed"
-                }`}
+                className={`cardContent ${index % 2 === 0 ? "normal" : "reversed"
+                  }`}
               >
                 <div className="left">
                   <div className="details">
                     <h2>{item.title}</h2>
                     <p>{item.desc}</p>
                   </div>
-                  <button className="enrollButton">Enroll Now</button>
+                  <div className="card-hover">
+                    <div className="enroll-button">
+                      Enroll Now
+                      <span className="arrow">→</span>
+                    </div>
+                  </div>
                 </div>
                 <div className="right">
                   <img

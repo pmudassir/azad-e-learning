@@ -67,6 +67,7 @@ const Auth = () => {
                     Sign Up
                   </button>
                 </form>
+
               </div>
             )}
           </div>
