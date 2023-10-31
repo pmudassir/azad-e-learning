@@ -18,37 +18,56 @@ const Auth = () => {
             <button className="authButtons" onClick={() => setIsSignUP(false)}>
               Sign Up
             </button>
+            <button className="authButtons" onClick={() => setIsSignUP(false)}>
+              Sign Up with Google
+            </button>
           </div>
-          {/* <div className='vertical-line'></div> */}
+
           <div className="inputAuthContainer">
             {isSignUp ? (
               <div className="authInputs">
-                <h2>Sign In</h2>
-                <div className="authInput">
-                  <label htmlFor="text">Email:</label>
-                  <input className="" type="email" placeholder="Your Email" />
-                </div>
+                <form action="#" className="authForm">
+                  <h2>Sign In</h2>
+                  <input
+                    className="authInput"
+                    type="email"
+                    placeholder="Your Email"
+                  />
+                  <input
+                    className="authInput"
+                    type="password"
+                    placeholder="Password"
+                  />
+                  <button className="submitButton" type="submit">
+                    Sign In
+                  </button>
+                </form>
               </div>
             ) : (
               <div className="authInputs">
-                <h2>Create Account</h2>
-                <div className="authInput">
-                  <label htmlFor="text">Name:</label>
-                  <input className="" type="" placeholder="" />
-                </div>
-                <div className="authInput">
-                  <label htmlFor="text">Email:</label>
-                  <input className="" type="" placeholder="" />
-                </div>
-                <div className="authInput">
-                  <label htmlFor="text">Password:</label>
-                  <input className="" type="" placeholder="" />
-                </div>
-                <div className="authInput">
-                  <label htmlFor="text">Repeat Password:</label>
-                  <input className="" type="" placeholder="" />
-                </div>
-                <button type="submit">Sign Up</button>
+                <form action="#" className="authForm">
+                  <h2>Create Account</h2>
+                  <input className="authInput" type="text" placeholder="Name" />
+                  <input
+                    className="authInput"
+                    type="email"
+                    placeholder="Email"
+                  />
+                  <input
+                    className="authInput"
+                    type="password"
+                    placeholder="Password"
+                  />
+                  <input
+                    className="authInput"
+                    type="password"
+                    placeholder="Repeat-password"
+                  />
+                  <button className="submitButton" type="submit">
+                    Sign Up
+                  </button>
+                </form>
+
               </div>
             )}
           </div>

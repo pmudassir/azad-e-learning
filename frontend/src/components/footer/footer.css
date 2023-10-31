@@ -2,6 +2,11 @@ footer {
   background-color: rgb(122, 203, 122);
   padding: 10px;
   margin-top: 50px;
+  /* position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0; */
+  
 }
 .footerContainer {
   display: flex;
@@ -53,12 +58,12 @@ footer {
   background-color: rgb(255, 255, 255);
 }
 
-.linkedin:hover{
+.linkedin:hover {
   border-radius: 20%;
   background-color: #6e94e5;
 }
 
-.youtube:hover{
+.youtube:hover {
   border-radius: 20%;
   background-color: #f10206;
 }
@@ -99,7 +104,7 @@ hr {
   font-size: 13px;
 }
 
-a{
+a {
   text-decoration: none;
   color: #2c234d;
   cursor: pointer;

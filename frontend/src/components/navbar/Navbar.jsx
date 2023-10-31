@@ -3,7 +3,7 @@ import "./navbar.css";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
-  const [user, setUser] = useState(true);
+  const [user, setUser] = useState(false);
 
   const logout = () => {
     setUser(false);
