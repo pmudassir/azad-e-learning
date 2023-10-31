@@ -3,7 +3,8 @@
   justify-content: space-between;
   font-size: 20px;
   height: 70px;
-  background-color: rgb(122, 203, 122);
+  /* background-color: rgb(122, 203, 122); */
+  background: linear-gradient(to right, #ffffff, #01e066);
   width: 100%;
 }
 
@@ -27,8 +28,8 @@
 }
 
 .logo_text {
-  height: 50px;
-  width: 60px;
+  height: 80px;
+  width: 90px;
   align-items: center;
   margin-left: -12px;
 }
@@ -102,8 +103,8 @@
   }
 
   .logo_text {
-    height: 40px;
-    width: 60px;
+    height: 60px;
+    width: 80px;
   }
 
   .items {
