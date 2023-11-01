@@ -9,25 +9,15 @@ const About = () => {
                     About Us
                 </p>
                 <p class="text-blk subHeading">
-                    We are Kerala's premier E-Learning Platform, dedicated to providing high-quality education
-                    anytime, anywhere. Our mission is to empower learners through innovative and accessible
-                    online courses. With a team of expert educators and cutting-edge technology, we strive for
-                    excellence and a bright future for all our students.
+                    Founded in the year 2000 as Azad College, Azad E-Learning has a rich history of providing quality
+                    education. Our journey began offline, but we quickly adapted to the evolving educational landscape.
+                    Now, as a pioneering force in basic education, we focus on English, Hindi, and Mathematics.
+                    Under the leadership of our CEO, Ahammed Rizvan K, we've harnessed technology to offer comprehensive,
+                    accessible, and engaging learning experiences. Our programs cover basic grammatical principles,
+                    spoken English, and fundamental mathematics.Our transformation from an offline institution to an
+                    innovative online platform reflects our unwavering commitment to excellence in education. Join us
+                    on our journey of educational innovation and success.
                 </p>
-                {/* <div class="social-icons-container">
-                    <a class="social-icon">
-                        <img class="socialIcon image-block" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/bb33.png" />
-                    </a>
-                    <a class="social-icon">
-                        <img class="socialIcon image-block" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/bb34.png" />
-                    </a>
-                    <a class="social-icon">
-                        <img class="socialIcon image-block" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/bb35.png" />
-                    </a>
-                    <a class="social-icon">
-                        <img class="socialIcon image-block" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/bb36.png" />
-                    </a>
-                </div> */}
             </div>
         </div>
     );
