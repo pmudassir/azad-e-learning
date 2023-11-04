@@ -1,55 +1,71 @@
 export const courseData = [
     {
-        title: "English",
-        difficulty: "Beginner",
-        image: "/images/englishBeginner.svg",
-        description: "Nunc et nisi non enim eleifend volutpat.ipsum metus volutpat nisi, sit amet tincidunt metus purus at urna. Maecenas lacinia",
+        subject: "English",
+        levels: [
+            {
+                level: "Beginner",
+                image: "/images/englishBeginner.svg",
+                price: 49.99,
+                description: "Kickstart your English language journey with our Beginner English Course. Perfect for those with little or no prior experience, this course covers the basics of English grammar and everyday communication.",
+            },
+            {
+                level: "Intermediate",
+                image: "/images/englishIntermediate.svg",
+                price: 79.99,
+                description: "Take your English skills to the next level with our Intermediate English Course. Designed for learners who want to enhance their speaking, writing, and comprehension skills.",
+            },
+            {
+                level: "Advanced",
+                image: "/images/englishAdvanced.svg",
+                price: 99.99,
+                description: "Master the English language with our Advanced English Course. Explore advanced grammar, literature, and professional communication to become fluent and confident.",
+            },
+        ],
     },
-    intermediate: {
-        image: "/images/englishIntermediate.svg",
-        description:
-            "vestibulum est sit amet aliquet. Aliquam  augue. Aliquam erat volutpat. Nulla turpis ante, pellentesque eu neque quis",
+    {
+        subject: "Math",
+        levels: [
+            {
+                level: "Beginner",
+                image: "/images/mathsBeginner.svg",
+                price: 59.99,
+                description: "Start your mathematical journey with our Beginner Math Course. Covering the fundamentals of arithmetic, algebra, and geometry, this course sets a strong foundation.",
+            },
+            {
+                level: "Intermediate",
+                image: "/images/mathsIntermediate.svg",
+                price: 89.99,
+                description: "Build on your math skills with our Intermediate Math Course. Delve into more advanced topics, including calculus, statistics, and problem-solving.",
+            },
+            {
+                level: "Advanced",
+                image: "/images/mathsAdvanced.svg",
+                price: 119.99,
+                description: "Excel in mathematics with our Advanced Math Course. Explore complex concepts, including advanced calculus and mathematical modeling, for academic and career success.",
+            },
+        ],
     },
-    advanced: {
-        image: "/images/englishAdvanced.svg",
-        description:
-            "semper rutrum metus. Curabitur metus. Sed accumsan metus sem, ut mattis justo tincidunt eget. Donec venenatis egestas",
+    {
+        subject: "Hindi",
+        levels: [
+            {
+                level: "Beginner",
+                image: "/images/hindiBeginner.svg",
+                price: 44.99,
+                description: "Start your Hindi language journey with our Beginner Hindi Course. Learn basic vocabulary, grammar, and essential phrases for everyday communication.",
+            },
+            {
+                level: "Intermediate",
+                image: "/images/hindiIntermediate.svg",
+                price: 74.99,
+                description: "Enhance your Hindi language skills with our Intermediate Hindi Course. Focus on fluency, writing, and understanding more complex texts.",
+            },
+            {
+                level: "Advanced",
+                image: "/images/hindiAdvanced.svg",
+                price: 94.99,
+                description: "Become a proficient Hindi speaker with our Advanced Hindi Course. Dive into advanced literature, culture, and professional communication in Hindi.",
+            },
+        ],
     },
-    },
-{
-    title: "Hindi",
-        beginner: {
-        image: "/images/hindiBeginner.svg",
-            description:
-        "Nunc et nisi non enim eleifend volutpat.ipsum metus volutpat nisi, sit amet tincidunt metus purus at urna. Maecenas lacinia",
-        },
-    intermediate: {
-        image: "/images/hindiIntermediate.svg",
-            description:
-        "vestibulum est sit amet aliquet. Aliquam  augue. Aliquam erat volutpat. Nulla turpis ante, pellentesque eu neque quis",
-        },
-    advanced: {
-        image: "/images/hindiAdvanced.svg",
-            description:
-        "semper rutrum metus. Curabitur metus. Sed accumsan metus sem, ut mattis justo tincidunt eget. Donec venenatis egestas",
-        },
-},
-{
-    title: "Maths",
-        beginner: {
-        image: "/images/mathsBeginner.svg",
-            description:
-        "Nunc et nisi non enim eleifend volutpat.ipsum metus volutpat nisi, sit amet tincidunt metus purus at urna. Maecenas lacinia",
-        },
-    intermediate: {
-        image: "/images/mathsIntermediate.svg",
-            description:
-        "vestibulum est sit amet aliquet. Aliquam  augue. Aliquam erat volutpat. Nulla turpis ante, pellentesque eu neque quis",
-        },
-    advanced: {
-        image: "/images/mathsAdvanced.svg",
-            description:
-        "semper rutrum metus. Curabitur metus. Sed accumsan metus sem, ut mattis justo tincidunt eget. Donec venenatis egestas",
-        },
-},
 ];
