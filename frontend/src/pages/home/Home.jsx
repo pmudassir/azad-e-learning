@@ -5,6 +5,7 @@ import Card from "../../components/card/Card";
 import Footer from "../../components/footer/Footer";
 import About from "../../components/about/About";
 import ContactUs from "../../components/contactUs/ContactUs";
+import CourseTime from "../../components/courseTimeline/CourseTime";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <Navbar />
       <Hero />
       <Card />
+      <CourseTime />
       <About />
       <ContactUs />
       <Footer />

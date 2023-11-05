@@ -42,9 +42,7 @@ const Course = () => {
                                         </div>
                                     </div>
                                 </div>
-
                             ))}
-
                         </div>
                     ))}
                 </div>
@@ -55,61 +53,3 @@ const Course = () => {
 };
 
 export default Course;
-
-
-
-{/* <div className="courseItem" key={index}>
-                            <div className="courseSubject">
-                                <span>{item.title}</span>
-                            </div>
-                            <div className="courses">
-                                <div className="course">
-                                    <img
-                                        className="courseImage"
-                                        src={item.beginner.image}
-                                        alt="courseImage"
-                                    />
-                                    <div className="features">
-                                        <h5 className="courseLevel">Beginner</h5>
-                                        <p className="courseDescription">
-                                            {item.beginner.description}
-                                        </p>
-                                    </div>
-                                    <button className="button" type="submit">
-                                        Enroll Now
-                                    </button>
-                                </div>
-                                <div className="course">
-                                    <img
-                                        className="courseImage"
-                                        src={item.intermediate.image}
-                                        alt="courseImage"
-                                    />
-                                    <div className="features">
-                                        <h5 className="courseLevel">Intermediate</h5>
-                                        <p className="courseDescription">
-                                            {item.intermediate.description}
-                                        </p>
-                                    </div>
-                                    <button className="button" type="submit">
-                                        Enroll Now
-                                    </button>
-                                </div>
-                                <div className="course">
-                                    <img
-                                        className="courseImage"
-                                        src={item.advanced.image}
-                                        alt="courseImage"
-                                    />
-                                    <div className="features">
-                                        <h5 className="courseLevel">Advanced</h5>
-                                        <p className="courseDescription">
-                                            {item.advanced.description}
-                                        </p>
-                                    </div>
-                                    <button className="button" type="submit">
-                                        Enroll Now
-                                    </button>
-                                </div>
-                            </div>
-                        </div> */}
