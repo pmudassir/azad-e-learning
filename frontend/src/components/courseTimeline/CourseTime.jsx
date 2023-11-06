@@ -5,8 +5,9 @@ const CourseTime = () => {
     return (
         <div className='container'>
             <div className="left">
-                <h1>Course</h1>
+                <h1>COURSE</h1>
                 <h3>Timeline</h3>
+                <img src="/images/handwriting.png" alt="" />
             </div>
             <div className="right">
                 <div className="mainCard">
