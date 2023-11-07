@@ -6,12 +6,14 @@ import Footer from "../../components/footer/Footer";
 import About from "../../components/about/About";
 import ContactUs from "../../components/contactUs/ContactUs";
 import Objectives from "../../components/objectives/Objectives";
+import Mode from "../../components/mode/Mode";
 
 const Home = () => {
   return (
     <>
       <Navbar />
       <Hero />
+      <Mode/>
       <Card />
       <Objectives />
       <About />
