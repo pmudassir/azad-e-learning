@@ -1,0 +1,71 @@
+.background-effect {
+  position: relative;
+  background-image: url("https://images.pexels.com/photos/5428267/pexels-photo-5428267.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"); /* Replace with your image path */
+  background-attachment: fixed;
+  background-size: cover; /* Adjust as needed */
+  background-position: center; /* Adjust as needed */
+  height: 45vh;
+  margin-bottom: 200px;
+  opacity: 0.3 green;
+}
+
+.background-effect:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(24, 74, 24, 0.5);
+  opacity: 1.5;
+}
+
+.featuresContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  flex-direction: column;
+  padding: 70px;
+  position: relative;
+}
+
+.featureHeader {
+  color: white;
+  font-size: 50px;
+  text-align: start;
+  margin: 30px;
+}
+
+.featureDescription {
+  text-align: start;
+  font-size: 19px;
+  color: rgb(255, 255, 255);
+  line-height: 30px;
+}
+
+.featureComponents {
+  margin: 50px;
+  /* position: absolute;
+  bottom: -190px; */
+}
+
+.featureComponent {
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  height: 150px;
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+
+  box-shadow: 2px 4px 10px -2px #9a9a9a;
+  border-radius: 15px;
+  background-color: #e0f3e5;
+}
+
+.featureComponentHeader {
+  margin-top: 20px;
+  font-size: 30px;
+}
