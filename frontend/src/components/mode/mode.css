@@ -1,0 +1,40 @@
+.modeSection {
+  background: linear-gradient(to right, #00f269, #05e69f,rgb(107, 222, 228));
+}
+
+.modeContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.mode {
+  display: flex;
+  padding-inline: 30px;
+  align-items: center;
+}
+
+.modeLeft {
+  flex: 1;
+}
+
+.modeIcon {
+  width: 300ox;
+  height: 300px;
+  margin-right: 0;
+
+}
+
+.modeRight {
+  flex: 1;
+}
+
+.modeHeader {
+    font-size: 30px;
+}
+
+.modeDesc {
+  font-size: 20px;
+  color: black;
+}
