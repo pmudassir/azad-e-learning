@@ -7,7 +7,7 @@ const CourseTime = () => {
             <div className="left">
                 <h1>COURSE</h1>
                 <h3>Timeline</h3>
-                <img src="/images/handwriting.png" alt="" />
+                <img src="/images/handwriting.png" alt="" className='courseTimeImg' />
             </div>
             <div className="right">
                 <div className="mainCard">
