@@ -18,6 +18,7 @@ const Footer = () => {
                 <div className="socialIcon youtube"><img src="https://img.icons8.com/color/96/youtube-play.png" width={25} height={25} alt="youtube" /></div>
                 <div className="socialIcon linkedin"><img src="https://img.icons8.com/fluency/96/linkedin.png" width={25} height={25} alt="linkedin" /></div>
                 <div className="socialIcon twitter"><img src="https://img.icons8.com/ios-filled/100/twitterx--v1.png" width={25} height={25} alt="twitter" /></div>
+
               </div>
             </div>
           </div>
@@ -38,9 +39,9 @@ const Footer = () => {
         </div>
       </div>
       <hr />
-        <div className="copyWright">
-          <p>© 2023 -24 AZAD E-LEARNING. All Rights Reserved</p>
-        </div>
+      <div className="copyWright">
+        <p>© 2023 -24 AZAD E-LEARNING. All Rights Reserved</p>
+      </div>
     </footer>
   );
 };

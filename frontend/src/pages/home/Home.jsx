@@ -18,6 +18,7 @@ const Home = () => {
       <Card />
       <Objectives />
       <About />
+      <CourseTime />
       <ContactUs />
       <CourseTime/>
       <Footer />
