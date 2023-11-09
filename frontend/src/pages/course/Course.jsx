@@ -18,22 +18,70 @@ const Course = () => {
             educational journey or looking to advance your skills, we've got you
             covered at every level.
           </span>
-          <div className="courseOverviews">
-          <div className="courseOverview">
-          <img width="30" height="30" className="overviewIcon" src="https://img.icons8.com/color/144/checked--v1.png" alt="checked--v1"/>
-            <h3 className="level">Beginner Level:</h3>
-            <p>At the beginner level, our courses are tailored to provide a strong foundation in the chosen subject. For English, we cover the basics of grammar, vocabulary, and essential language skills. In Maths, we introduce fundamental concepts and problem-solving techniques, and for Hindi, we focus on building your proficiency in reading, writing, and speaking. Our beginner courses are perfect for those who are new to the subject or looking to refresh their knowledge.</p>
-          </div>
-          <div className="courseOverview">
-          <img width="30" height="30" className="overviewIcon" src="https://img.icons8.com/color/144/checked--v1.png" alt="checked--v1"/>
-            <h3 className="level">Intermediate Level:</h3>
-            <p>Moving on to the intermediate level, our courses delve deeper into the subject matter. In English, we explore more advanced grammar rules, expand your vocabulary, and work on enhancing your conversational skills. For Maths, we tackle more complex topics and problem-solving strategies. In Hindi, our intermediate courses focus on refining your language skills for more in-depth communication. These courses are ideal for learners who want to take their understanding of the subject to the next level.</p>
-          </div>
-          <div className="courseOverview">
-          <img width="30" height="30" className="overviewIcon" src="https://img.icons8.com/color/144/checked--v1.png" alt="checked--v1"/>
-            <h3 className="level">Advanced Level:</h3>
-            <p>At the advanced level, we offer courses designed to challenge and push your boundaries. In English, we dive into advanced language structures, literary analysis, and effective communication. In Maths, we tackle advanced mathematical concepts and problem-solving techniques. For Hindi, our advanced courses focus on fluency, complex literature, and cultural immersion. These courses are intended for those who are looking to master the subject and achieve a high level of proficiency.</p>
-          </div>
+          <div className="headerDesc">
+            <div className="courseOverviews">
+              <div className="courseOverview">
+                <div className="boxContainer">
+                  <div className="box">
+                    <div className="circle"></div>
+                  </div>
+                </div>
+                <div className="levelInfo">
+                  <h3 className="level">Beginner Level:</h3>
+                  <p>
+                    Our beginner courses provide a strong foundation in English,
+                    covering grammar and vocabulary, in Maths with fundamental
+                    concepts, and in Hindi, focusing on reading, writing, and
+                    speaking proficiency. Perfect for newcomers or those
+                    refreshing their knowledge.
+                  </p>
+                </div>
+              </div>
+              <div className="courseOverview">
+                <div className="boxContainer">
+                  <div className="box">
+                    <div className="circle intermediate"></div>
+                  </div>
+                </div>
+                <div className="levelInfo">
+                  <h3 className="level">Intermediate Level:</h3>
+                  <p>
+                    Transitioning to intermediate, our courses delve deeper. In
+                    English, we explore advanced grammar, expand vocabulary, and
+                    enhance conversational skills. For Maths, we tackle complex
+                    topics and strategies. In Hindi, intermediate courses refine
+                    language skills for more in-depth communication. Ideal for
+                    learners aiming for a deeper understanding.
+                  </p>
+                </div>
+              </div>
+              <div className="courseOverview">
+                <div className="boxContainer">
+                  <div className="box">
+                    <div className="circle advanced"></div>
+                  </div>
+                </div>
+                <div className="levelInfo">
+                  <h3 className="level">Advanced Level:</h3>
+                  <p>
+                    For the advanced level, our courses push boundaries. In
+                    English, we dive into advanced language structures, literary
+                    analysis, and effective communication. In Maths, we tackle
+                    advanced concepts and problem-solving. In Hindi, advanced
+                    courses focus on fluency, complex literature, and cultural
+                    immersion. Perfect for those aspiring to master the subject
+                    with a high level of proficiency.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="courseGraphImgContainer">
+              <img
+                className="graphImg"
+                src="images/graph.png"
+                alt="course-graph"
+              />
+            </div>
           </div>
         </div>
         <div className="courseContainer">
@@ -41,8 +89,7 @@ const Course = () => {
             <div>
               <h2 className="courseSubject">{item.subject}</h2>
               {item.levels.map((course) => (
-                <div
-                  key={course.level} className="courses">
+                <div key={course.level} className="courses">
                   <div class="card" key={index}>
                     <div class="card-img">
                       <img
