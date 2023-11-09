@@ -13,11 +13,12 @@ const Footer = () => {
             </div>
             <div className="contact">
               <div className="socialIcons">
-                <div className="socialIcon facebook"><img src="https://img.icons8.com/fluency/96/facebook-new.png" style={{ width: 25, height: 25 }} alt="faceBook" /></div>
-                <div className="socialIcon instagram"><img src="https://img.icons8.com/fluency/96/instagram-new.png" style={{ width: 25, height: 25 }} alt="" /></div>
-                <div className="socialIcon youtube"><img src="https://img.icons8.com/color/96/youtube-play.png" style={{ width: 25, height: 25 }} alt="" /></div>
-                <div className="socialIcon linkedin"><img src="https://img.icons8.com/fluency/96/linkedin.png" style={{ width: 25, height: 25 }} alt="" /></div>
-                <div className="socialIcon twitter"><img src="https://img.icons8.com/ios-filled/100/twitterx--v1.png" style={{ width: 25, height: 25 }} alt="" /></div>
+                <div className="socialIcon facebook"><img src="https://img.icons8.com/fluency/96/facebook-new.png" width={25} height={25} alt="faceBook" /></div>
+                <div className="socialIcon instagram"><img src="https://img.icons8.com/fluency/96/instagram-new.png" width={25} height={25} alt="instagram" /></div>
+                <div className="socialIcon youtube"><img src="https://img.icons8.com/color/96/youtube-play.png" width={25} height={25} alt="youtube" /></div>
+                <div className="socialIcon linkedin"><img src="https://img.icons8.com/fluency/96/linkedin.png" width={25} height={25} alt="linkedin" /></div>
+                <div className="socialIcon twitter"><img src="https://img.icons8.com/ios-filled/100/twitterx--v1.png" width={25} height={25} alt="twitter" /></div>
+
               </div>
             </div>
           </div>

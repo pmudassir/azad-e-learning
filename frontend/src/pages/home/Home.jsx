@@ -20,6 +20,7 @@ const Home = () => {
       <About />
       <CourseTime />
       <ContactUs />
+      <CourseTime/>
       <Footer />
     </>
   );
