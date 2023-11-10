@@ -50,8 +50,6 @@
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
-  /* background: #e9e9e9;
-  box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff; */
 }
 
 .header {
@@ -64,8 +62,6 @@
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
-  /* background: #e9e9e9;
-  box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff; */
 }
 
 .header p {
@@ -88,8 +84,6 @@
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
-  /* background: #e9e9e9;
-  box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff; */
 }
 
 .evening {
