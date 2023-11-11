@@ -18,8 +18,8 @@
 }
 
 .colorEffect{
-  background: linear-gradient(to right, #00f269, #05e69f,rgb(107, 222, 228));
   height: 45vh;
+  background: linear-gradient(to right, #00f269, #05e69f,rgb(107, 222, 228));
   opacity: 0.9;
 }
 
@@ -34,6 +34,7 @@
 }
 
 .featureHeader {
+  color: #2c234d; 
   font-size: 50px;
   text-align: start;
   margin: 30px;

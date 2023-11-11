@@ -1,3 +1,9 @@
+.cards-section{
+  background: url("./animated-blob.svg");
+  background-repeat: no-repeat;
+  margin: 0;
+}
+
 .cardContainer {
   margin-top: 100px;
   display: flex;

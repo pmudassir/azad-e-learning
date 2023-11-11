@@ -4,6 +4,7 @@ import "./hero.css";
 const Hero = () => {
   return (
     <div className="hero">
+        <div className="hero-blob"></div>
       <div className="hero-left">
         <h1>
           Kerala's Best <br /> E-Learning <br /> Platform
@@ -12,7 +13,6 @@ const Hero = () => {
       </div>
       <div className="hero-right">
         <img src="/images/Hero.jpg" className="heroImg" alt="Hero" />
-        <div className="hero-blob"></div>
       </div>
     </div>
   );
