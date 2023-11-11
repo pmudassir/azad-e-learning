@@ -40,33 +40,38 @@ const cardData = [
 
 const Card = () => {
   return (
-    <div className="cardContainer">
-      <div className="header">
-        <span className="sideHeading">Ready To Learn?</span>
-        <h1 className="heading">Featured Courses</h1>
+    <section className="cards-section">
+      <div className="cardContainer">
+        <div className="header">
+          <span className="sideHeading">Ready To Learn?</span>
+          <h1 className="heading">Featured Courses</h1>
+        </div>
+        <div className="cards">
+          {cardData.map((item) => (
+            <div className="cardItem" key={item.id}>
+              <Link
+                to={item.link}
+                style={{ textDecoration: "none", color: "black" }}
+              >
+                <div className="cardItemContent">
+                  <img
+                    width="95"
+                    height="95"
+                    className="card-icon"
+                    src={item.imageUrl}
+                    alt="course-avatar"
+                  />
+                  <h6
+                    className="card-title"
+                    dangerouslySetInnerHTML={{ __html: item.title }}
+                  ></h6>
+                </div>
+              </Link>
+            </div>
+          ))}
+        </div>
       </div>
-      <div className="cards">
-        {cardData.map((item) => (
-          <div className="cardItem" key={item.id}>
-            <Link to={item.link} style={{ textDecoration: "none", color: "black" }}>
-              <div className="cardItemContent">
-                <img
-                  width="95"
-                  height="95"
-                  className="card-icon"
-                  src={item.imageUrl}
-                  alt="course-avatar"
-                />
-                <h6
-                  className="card-title"
-                  dangerouslySetInnerHTML={{ __html: item.title }}
-                ></h6>
-              </div>
-            </Link>
-          </div>
-        ))}
-      </div>
-    </div>
+    </section>
   );
 };
 
