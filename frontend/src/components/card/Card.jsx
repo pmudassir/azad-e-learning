@@ -1,42 +1,7 @@
 import React from "react";
 import "./card.css";
 import { Link } from "react-router-dom";
-
-const cardData = [
-  {
-    id: 1,
-    title: "Foundation Programs",
-    link: "/course",
-    imageUrl:
-      "https://img.icons8.com/external-smashingstocks-hand-drawn-color-smashing-stocks/100/external-Abacus-education-smashingstocks-hand-drawn-color-smashing-stocks.png",
-  },
-  {
-    id: 2,
-    title: "Pre-Primary TTC",
-    link: "/ppttc",
-    imageUrl: "https://i.ibb.co/MpCD2wf/teacher-5190740.png",
-  },
-  {
-    id: 3,
-    title: "Montessori <br/> TTC",
-    link: "/mttc",
-    imageUrl:
-      "https://img.icons8.com/external-justicon-lineal-color-justicon/128/external-business-presentation-back-to-school-justicon-lineal-color-justicon.png",
-  },
-  {
-    id: 4,
-    title: "Hindi <br/> TTC",
-    link: "/httc",
-    imageUrl: "https://i.ibb.co/PhdRvqr/hindi.png",
-  },
-  {
-    id: 4,
-    title: "Competitive Goals",
-    link: "/competitive-goals",
-    imageUrl:
-      "https://img.icons8.com/external-goofy-flat-kerismaker/192/external-Goals-business-goofy-flat-kerismaker.png",
-  },
-];
+import { cardData } from "../../data";
 
 const Card = () => {
   return (

@@ -33,5 +33,3 @@ const CourseTime = () => {
 }
 
 export default CourseTime
-
-// git check
