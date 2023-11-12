@@ -17,7 +17,6 @@ function App() {
           <Route path="/httc" element={<Form />} />
           <Route path="/competitive-goals" element={<CompetitiveGoals />} />
           <Route path="/auth" element={<Auth />} />
-
         </Routes>
       </BrowserRouter>
     </>
