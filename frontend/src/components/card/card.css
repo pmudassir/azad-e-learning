@@ -2,6 +2,7 @@
   background: url("./animated-blob.svg");
   background-repeat: no-repeat;
   margin: 0;
+  height: 475px;
 }
 
 .cardContainer {
@@ -12,7 +13,7 @@
   width: 100%;
 }
 
-.header {
+.cards-header {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
@@ -22,6 +23,7 @@
 }
 
 .sideHeading {
+  margin-bottom: 10px;
   font-size: 30px;
   color: #9a9a9a;
 }

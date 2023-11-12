@@ -7,7 +7,6 @@ const ContactUs = () => {
       <div className="contact-left">
         <p>Contact Us</p>
         <h1>Connect with Our Experts</h1>
-        {/* Add your form inputs here */}
         <form>
           <input type="text" placeholder="Your Name" />
           <input type="email" placeholder="Your Email" />
@@ -16,7 +15,7 @@ const ContactUs = () => {
         </form>
       </div>
       <div className="contact-right">
-        <img src="/images/contactus.png" alt="Contact Image" />
+        <img src="/images/contactus.png" alt="Contact" />
       </div>
     </div>
   );

@@ -2,9 +2,9 @@
   position: relative;
   background-image: url("https://images.pexels.com/photos/5428267/pexels-photo-5428267.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"); /* Replace with your image path */
   background-attachment: fixed;
-  background-size: cover; /* Adjust as needed */
-  background-position: center; /* Adjust as needed */
-  height: 45vh;
+  background-size: cover;
+  background-position: center;
+  height: 520px;
   margin-bottom: 200px;
 }
 
@@ -17,9 +17,9 @@
   height: 100%;
 }
 
-.colorEffect{
-  height: 45vh;
-  background: linear-gradient(to right, #00f269, #05e69f,rgb(107, 222, 228));
+.colorEffect {
+  height: 100%;
+  background: linear-gradient(to right, #00f269, #05e69f, rgb(107, 222, 228));
   opacity: 0.9;
 }
 
@@ -34,7 +34,7 @@
 }
 
 .featureHeader {
-  color: #2c234d; 
+  color: #2c234d;
   font-size: 50px;
   text-align: start;
   margin: 30px;
@@ -49,8 +49,6 @@
 
 .featureComponents {
   margin: 20px;
-  /* position: absolute; */
-  /* bottom: -190px; */
 }
 
 .featureComponent {

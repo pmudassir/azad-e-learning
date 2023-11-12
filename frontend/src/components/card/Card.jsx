@@ -7,7 +7,7 @@ const Card = () => {
   return (
     <section className="cards-section">
       <div className="cardContainer">
-        <div className="header">
+        <div className="cards-header">
           <span className="sideHeading">Ready To Learn?</span>
           <h1 className="heading">Featured Courses</h1>
         </div>
