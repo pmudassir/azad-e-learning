@@ -13,7 +13,6 @@ const Navbar = () => {
       <div className="wrapper">
         <Link to={"/"}>
           <div className="icon">
-            {/* <img src="/images/logo1.png" alt="icon" className="logo" /> */}
             <img src="/images/logo2.png" alt="icon2" className="logo_text" />
           </div>
         </Link>

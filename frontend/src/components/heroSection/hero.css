@@ -21,6 +21,17 @@
 .hero-left p {
   font-size: 18px;
   color: #666;
+  border: 1px solid rgb(63, 137, 63);
+  padding: 5px;
+  border-radius: 5px;
+  background-color: rgb(122, 203, 122);
+  color: white;
+}
+
+.tags {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
 }
 
 .hero-right {
@@ -28,19 +39,7 @@
   position: relative;
 }
 
-/* .hero-blob{
-  margin: 0;
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('blob-hero.svg');
-  background-size: cover;
-  z-index: 0;
-} */
-
-.heroImg{
+.heroImg {
   max-width: 100%;
   height: auto;
   z-index: 1;

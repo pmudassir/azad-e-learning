@@ -4,8 +4,8 @@ import "./objectives.css";
 const Features = () => {
   return (
     <section className="background-effect">
-        <div className="colorEffect">
-      <div className="featuresContainer">
+      <div className="colorEffect">
+        <div className="featuresContainer">
           <h1 className="featureHeader">OBJECTIVES</h1>
           <span className="featureDescription">
             Azad E-Learning places a significant emphasis on mathematics

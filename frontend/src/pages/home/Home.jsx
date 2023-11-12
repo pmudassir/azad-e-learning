@@ -7,7 +7,6 @@ import About from "../../components/about/About";
 import ContactUs from "../../components/contactUs/ContactUs";
 import Objectives from "../../components/objectives/Objectives";
 import Mode from "../../components/mode/Mode";
-import CourseTime from "../../components/courseTimeline/CourseTime";
 
 const Home = () => {
   return (
@@ -18,7 +17,6 @@ const Home = () => {
       <Card />
       <Objectives />
       <About />
-      <CourseTime />
       <ContactUs />
       <Footer />
     </>
