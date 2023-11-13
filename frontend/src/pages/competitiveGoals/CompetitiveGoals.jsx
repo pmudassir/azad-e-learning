@@ -23,7 +23,7 @@ const goalsData = [
     title: "USS",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut augue id quam tincidunt efficitur. Donec ligula metus, suscipit quis auctor eget, fringilla ac tellus. Quisque id quam at massa tincidunt lobortis. Curabitur id ipsum porttitor, porta turpis at, accumsan arcu. Sed eu pellentesque turpis.",
     imgUrl:
-      "https://plus.unsplash.com/premium_photo-1664372145541-4556b409492e?auto=format&fit=crop&q=80&w=3869&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1529390079861-591de354faf5?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTUxfHxzdHVkZW50c3xlbnwwfHwwfHx8MA%3D%3D",
   },
   {
     id: 4,
