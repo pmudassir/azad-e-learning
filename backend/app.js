@@ -19,11 +19,6 @@ app.use(express.json());
 app.use(passport.initialize());
 app.use(passport.session());
 
-//DB Connection
-mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => console.log('Connected to MongoDB'))
-    .catch((err) => console.error('Error connecting to MongoDB:', err));
-
 passport.use(new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
@@ -110,79 +105,13 @@ app.get("/ppttc", ensureAuthenticated, (req, res) => {
     res.render("ppttc", { user: req.user })
 })
 
-app.post("/ppttc", async (req, res) => {
-    try {
-        const userEmail = req.user.emails[0].value;
-        const user = await User.findOne({ email: userEmail });
-        const userId = user._id.valueOf();
-        const formData = {
-            name: req.body.name,
-            mobileNumber: req.body.number,
-            email: req.body.email,
-            district: req.body.district,
-            mode: req.body.mode,
-            course: "ppttc",
-        };
-        await User.findByIdAndUpdate(userId, { $push: { formSubmitted: formData }, }, { new: true });
-        req.flash("success", "Form submitted successfully!");
-        res.status(200).redirect("/");
-    } catch (error) {
-        console.log(error);
-        res.status(500).send("An error occurred while submitting form", error);
-    }
-});
-
 app.get("/mttc", ensureAuthenticated, (req, res) => {
     res.render("mttc", { user: req.user })
 })
 
-app.post("/mttc", async (req, res) => {
-    try {
-        const userEmail = req.user.emails[0].value;
-        const user = await User.findOne({ email: userEmail });
-        const userId = user._id.valueOf();
-        const formData = {
-            name: req.body.name,
-            mobileNumber: req.body.number,
-            email: req.body.email,
-            district: req.body.district,
-            mode: req.body.mode,
-            course: "mttc",
-        };
-        await User.findByIdAndUpdate(userId, { $push: { formSubmitted: formData }, }, { new: true });
-        req.flash("success", "Form submitted successfully!");
-        res.status(200).redirect("/");
-    } catch (error) {
-        console.log(error);
-        res.status(500).send("An error occurred while submitting form", error);
-    }
-});
-
 app.get("/hindi", ensureAuthenticated, (req, res) => {
     res.render("hindi", { user: req.user })
 })
-
-app.post("/hindi", async (req, res) => {
-    try {
-        const userEmail = req.user.emails[0].value;
-        const user = await User.findOne({ email: userEmail });
-        const userId = user._id.valueOf();
-        const formData = {
-            name: req.body.name,
-            mobileNumber: req.body.number,
-            email: req.body.email,
-            district: req.body.district,
-            mode: req.body.mode,
-            course: "hindi teachers course",
-        };
-        await User.findByIdAndUpdate(userId, { $push: { formSubmitted: formData }, }, { new: true });
-        req.flash("success", "Form submitted successfully!");
-        res.status(200).redirect("/");
-    } catch (error) {
-        console.log(error);
-        res.status(500).send("An error occurred while submitting form", error);
-    }
-});
 
 app.get("/competitive", ensureAuthenticated, (req, res) => {
     res.render("competitive", { user: req.user })
