@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [user, setUser] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
 
   const logout = () => {
     setUser(false);
@@ -16,8 +17,11 @@ const Navbar = () => {
             <img src="/images/logo2.png" alt="icon2" className="logo_text" />
           </div>
         </Link>
+        <div className="menu-toggle" onClick={() => setShowMenu(!showMenu)}>
+          ☰
+        </div>
       </div>
-      <div className="link-section">
+      <div className={`link-section ${showMenu ? 'show' : ''}`}>
         <ul className="menu">
           <li className="item">About</li>
           <li className="item">Courses</li>

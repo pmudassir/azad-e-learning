@@ -108,24 +108,69 @@ h2 {
   cursor: pointer;
   padding: 10px;
   font-weight: 600;
+  color: #4caf50;
 
   transition: transform 0.3s ease;
 }
 
 .enroll-button:hover {
-  color: #4caf50;
-  transform: translateX(5px); 
+  transform: translateX(5px);
 }
 
 .arrow {
   margin-left: 5px;
   font-size: 20px;
-  color: black;
+  color: rgb(138, 138, 138);
 
   transition: transform 0.3s ease;
 }
 
 .enroll-button:hover .arrow {
   color: #4caf50;
-  transform: translateX(8px); 
+  transform: translateX(8px);
+}
+
+
+
+@media (max-width: 768px) {
+  .goalsHeder {
+    margin: 20px; 
+  }
+
+  .goalsHeder h1 {
+    font-size: 28px; 
+  }
+
+  .goalsCard {
+    height: auto; 
+    width: 85%; 
+    margin: 20px auto;  
+  }
+
+ 
+  .right {
+    flex: none; 
+    display: none;
+  }
+
+  .details {
+    padding: 5px; 
+  }
+
+  .goalsImage {
+    height: auto; 
+    opacity: 1; 
+  }
+
+  .card-hover {
+    position: static;  
+    opacity: 1; 
+    margin-top: 10px; 
+    text-align: center; 
+  }
+
+  .enroll-button {
+    font-size: 14px; 
+    padding: 8px; 
+  }
 }
