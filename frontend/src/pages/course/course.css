@@ -11,91 +11,6 @@
   padding-inline: 90px;
 }
 
-.course-desc-container {
-  border-radius: 30px;
-  background-color: #e0e0e0;
-  box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
-  margin: 80px 40px;
-  height: auto;
-  width: auto;
-}
-
-.courseDesc {
-  margin-top: 10px;
-  font-size: 16px;
-  color: #403f3f;
-}
-
-.bold {
-  font-size: 30px;
-  color: #737373;
-}
-
-.headerDesc {
-  display: flex;
-}
-
-.courseOverviews {
-  flex: 1px;
-  margin-top: 20px;
-  position: relative;
-}
-
-.courseOverview {
-  display: flex;
-  padding-top: 20px;
-}
-
-.boxContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 20px;
-}
-
-.box {
-  position: relative;
-  height: 100px;
-  width: 100px;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-  border-radius: 20px;
-}
-
-.circle {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  background-color: rgb(146, 249, 146);
-  border-radius: 50%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.circle.intermediate {
-  background-color: rgb(228, 239, 18);
-}
-.circle.advanced {
-  background-color: rgb(233, 189, 183);
-}
-
-.levelInfo {
-  flex: 2;
-  text-align: start;
-}
-
-.courseGraphImgContainer {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.graphImg {
-  height: 350px;
-  width: 350px;
-}
-
 .courseContainer {
   display: flex;
   flex-direction: column;
@@ -115,28 +30,6 @@
   align-items: center;
 }
 
-.course {
-  margin: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  text-align: center;
-  flex-direction: column;
-  border-radius: 5%;
-  overflow: hidden;
-  transition: background-color 0.2s;
-  width: 400px;
-  transition: all 0.3s ease;
-}
-
-.level {
-  text-align: start;
-  margin-bottom: 10px;
-  font-size: 20px;
-}
-
-.features {
-  padding: 10px;
-}
 .courseImage {
   text-align: center;
   object-fit: contain;

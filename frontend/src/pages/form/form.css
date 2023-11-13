@@ -23,13 +23,13 @@
 
 .sessionType input[type="button"] {
   border: 1px solid gray;
-  padding: 10px 20px;
+  padding: 10px 40px;
   border-radius: 5px;
-  cursor: pointer;
+  cursor: pointer;;
 }
 
 .selectedType {
-  background-color: #3498db;
+  background-color: rgb(122, 203, 122);
   color: #ffffff;
 }
 
@@ -40,7 +40,7 @@ h4 {
 
 .detailItems {
   display: grid;
-  grid-template-columns: 1fr 1fr;;
+  grid-template-columns: 1fr 1fr;
   gap: 20px;
   margin-top: 20px;
   column-gap: 50px;

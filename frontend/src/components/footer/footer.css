@@ -2,12 +2,8 @@ footer {
   background-color: rgb(122, 203, 122);
   padding: 10px;
   margin-top: 50px;
-  /* position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0; */
-  
 }
+
 .footerContainer {
   display: flex;
   justify-content: center;
@@ -29,7 +25,6 @@ footer {
 
 .socialIcons {
   display: flex;
-  /* padding: 0px 20px; */
 }
 
 .socialIcon {

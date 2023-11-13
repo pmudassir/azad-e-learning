@@ -41,7 +41,7 @@ const Form = () => {
                 id="inputSubmitForm"
                 value="Online"
                 onClick={() => handleType("online")}
-                className={ sessionType === "online" ? "selectedType" : ""}
+                className={sessionType === "online" ? "selectedType" : ""}
               />
               <input
                 type="button"
@@ -58,7 +58,7 @@ const Form = () => {
                   Name<span>*</span>
                 </label>
                 <input
-                className="inputTextForm"
+                  className="inputTextForm"
                   type="text"
                   placeholder="Your Name"
                   value={name}
@@ -70,7 +70,7 @@ const Form = () => {
                   Email<span>*</span>
                 </label>
                 <input
-                className="inputEmailForm"
+                  className="inputEmailForm"
                   type="email"
                   placeholder="Email Address"
                   value={email}
@@ -79,10 +79,10 @@ const Form = () => {
               </div>
               <div className="detailsItem">
                 <label htmlFor="tel">
-                  Phone Number<span>*</span>
+                  Mobile Number<span>*</span>
                 </label>
                 <input
-                className="inputTelForm"
+                  className="inputTelForm"
                   type="tel"
                   placeholder="Mobile Number"
                   pattern="[0-9]{10}"
@@ -120,7 +120,7 @@ const Form = () => {
               </div>
             </div>
             <input
-            className="" type="submit" value="Submit" />
+              className="" type="submit" value="Submit" />
           </form>
         </div>
       </div>
