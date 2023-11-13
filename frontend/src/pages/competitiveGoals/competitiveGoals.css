@@ -1,7 +1,3 @@
-.goalsContainer {
-  margin: 60px;
-}
-
 .goalsHeder {
   display: flex;
   align-items: center;
@@ -16,13 +12,14 @@
 }
 
 .goalsCards {
-  margin: 10px 200px 150px 200px;
   display: grid;
   align-items: center;
   justify-content: center;
 }
 
 .goalsCard {
+  height: 20vw;
+  width: 70vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -63,23 +60,9 @@
 
 .goalsImage {
   max-width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
   opacity: 0.6;
-}
-
-.enrollButton {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-
-  background-color: #4caf50;
-  color: #fff;
-  border: none;
-  padding: 10px 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  margin: 20px;
 }
 
 .details {
@@ -95,17 +78,23 @@ h2 {
 
 .card-hover {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  bottom: 30px;
+  left: 10px;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   opacity: 0;
-  transition: opacity 0.2s;
+  transition: opacity 0.3s ease;
+}
+
+.goalsCard:hover .card-hover {
+  opacity: 1;
+}
+
+.goalsCard {
+  transition: transform 0.3s ease;
 }
 
 .card:hover .card-hover {
@@ -114,13 +103,29 @@ h2 {
 
 .enroll-button {
   font-size: 16px;
-  color: #fff;
   display: flex;
   align-items: center;
   cursor: pointer;
+  padding: 10px;
+  font-weight: 600;
+
+  transition: transform 0.3s ease;
+}
+
+.enroll-button:hover {
+  color: #4caf50;
+  transform: translateX(5px); 
 }
 
 .arrow {
   margin-left: 5px;
   font-size: 20px;
+  color: black;
+
+  transition: transform 0.3s ease;
+}
+
+.enroll-button:hover .arrow {
+  color: #4caf50;
+  transform: translateX(8px); 
 }
