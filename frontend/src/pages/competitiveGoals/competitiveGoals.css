@@ -130,47 +130,44 @@ h2 {
   transform: translateX(8px);
 }
 
-
-
 @media (max-width: 768px) {
   .goalsHeder {
-    margin: 20px; 
+    margin: 20px;
   }
 
   .goalsHeder h1 {
-    font-size: 28px; 
+    font-size: 28px;
   }
 
   .goalsCard {
-    height: auto; 
-    width: 85%; 
-    margin: 20px auto;  
+    height: auto;
+    width: 85%;
+    margin: 20px auto;
   }
 
- 
   .right {
-    flex: none; 
+    flex: none;
     display: none;
   }
 
   .details {
-    padding: 5px; 
+    padding: 5px;
   }
 
   .goalsImage {
-    height: auto; 
-    opacity: 1; 
+    height: auto;
+    opacity: 1;
   }
 
   .card-hover {
-    position: static;  
-    opacity: 1; 
-    margin-top: 10px; 
-    text-align: center; 
+    position: static;
+    opacity: 1;
+    margin-top: 10px;
+    text-align: center;
   }
 
   .enroll-button {
-    font-size: 14px; 
-    padding: 8px; 
+    font-size: 14px;
+    padding: 8px;
   }
 }
