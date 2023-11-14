@@ -39,3 +39,15 @@
   font-size: 20px;
   color: black;
 }
+
+
+@media (max-width:768px){
+  .modeSection {
+    margin-top: 20px;
+    height: 30vh;
+  }
+
+  .modeLeft {
+    display: none;
+  }
+}
