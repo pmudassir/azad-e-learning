@@ -18,10 +18,23 @@ footer {
   margin: 20px;
 }
 
-.left {
+.leftFooter {
   flex: 1;
   align-items: start;
 }
+
+.logoFooter {
+  height: 80px;
+  height: 80px;
+  margin-left: -10px;
+}
+
+.logoText {
+  height: 70px;
+  height: 70px;
+  margin-left: -20px;
+}
+
 
 .socialIcons {
   display: flex;
@@ -77,7 +90,7 @@ li {
   font-size: small;
 }
 
-.right {
+.rightFooter {
   padding: 0;
   flex: 1;
 }
@@ -103,4 +116,18 @@ a {
   text-decoration: none;
   color: #2c234d;
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+  }
+
+  .iconFooter {
+    display: flex-start;
+  }
+  
+  .rightFooter {
+    margin-top: 50px;
+  }
 }

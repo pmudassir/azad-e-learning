@@ -37,7 +37,6 @@
 .hero-right {
   flex: 1;
   position: relative;
-  display: none;
 }
 
 .heroImg {
@@ -50,13 +49,12 @@
   .hero {
     flex-direction: row;
     margin: 0 10px;
+    margin-top: 20px;
   }
 
   .hero-left {
-    text-align: left; /* Reset text alignment for larger screens */
+    text-align: left;
     padding: 0;
-    align-items: center;
-    justify-content: center;
   }
 
   .hero-left h1 {
@@ -66,6 +64,10 @@
 
   .hero-left p {
     font-size: 18px;
+  }
+ 
+  .hero-right{
+    display: none;
   }
 
   .tags {

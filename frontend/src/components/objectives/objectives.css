@@ -1,6 +1,6 @@
 .background-effect {
   position: relative;
-  background-image: url("https://images.pexels.com/photos/5428267/pexels-photo-5428267.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"); /* Replace with your image path */
+  background-image: url("https://images.pexels.com/photos/5428267/pexels-photo-5428267.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"); 
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -69,4 +69,22 @@
 .featureComponentHeader {
   margin-top: 20px;
   font-size: 30px;
+}
+
+@media (max-width: 768px) {
+  .background-effect {
+    height: auto;
+  margin-bottom: 70px;
+
+  }
+
+  .featuresContainer {
+    margin-top: 20px;
+    padding: 22px;
+  }
+
+  .featureComponents{
+    display: flex;align-items: center;justify-content: center;
+    flex-direction: column;
+  }
 }
