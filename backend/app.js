@@ -54,6 +54,8 @@ passport.deserializeUser((user, done) => {
 
 // Routes
 app.use("/api/auth", authRoute);
+
+
 app.get("/", async (req, res) => {
     if (req.user) {
         const user = await User.findOne({ email: req.user.emails[0].value })
