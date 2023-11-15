@@ -75,3 +75,18 @@
     transform: translateY(0);
   }
 }
+
+
+@media (max-width: 768px){
+.contact-us {
+margin-top: 30px;
+}
+
+.contact-container {
+ flex-direction: column;
+}
+
+.contact-element {
+ width: 60vw;
+}
+}
