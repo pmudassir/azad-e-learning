@@ -4,8 +4,8 @@ const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const User = require('./models/User');
 require("dotenv").config()
-
 const app = express();
+const authRoute = require('./routes/auth');
 
 // Middleware
 app.use(express.urlencoded({ extended: true }));
@@ -52,7 +52,8 @@ passport.deserializeUser((user, done) => {
     done(null, user);
 });
 
-// Routes 
+// Routes
+app.use("/api/auth", authRoute);
 app.get("/", async (req, res) => {
     if (req.user) {
         const user = await User.findOne({ email: req.user.emails[0].value })
