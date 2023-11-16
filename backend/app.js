@@ -8,8 +8,6 @@ const authRoute = require('./routes/auth');
 const formsRoute = require('./routes/forms');
 const connectDB = require('./utils/db');
 
-// DB
-connectDB();
 
 // Middleware
 app.use(express.urlencoded({ extended: true }));

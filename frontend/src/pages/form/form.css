@@ -97,21 +97,23 @@ span {
     justify-content: center;
     flex-direction: column;
     margin: 0;
-  margin-top: 20px;
-  column-gap: 0px;
+    margin-top: 20px;
+    column-gap: 0px;
   }
 
   .inputTextForm,
   .inputEmailForm,
-  .inputTelForm{
+  .inputTelForm {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 70vw;
   }
 
-  select{
-    display: flex;align-items: center;justify-content: center;
+  select {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 76vw;
   }
 }
