@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "./form.css";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
+import axios from "axios";
+import { useLocation } from "react-router-dom";
 
 const Form = () => {
   const [sessionType, setSessionType] = useState("");
@@ -10,12 +12,26 @@ const Form = () => {
   const [mobileNumber, setMobileNumber] = useState("");
   const [district, setDistrict] = useState("");
 
+  const location = useLocation();
+
   const handleType = (option) => {
     setSessionType(option);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
+    try {
+      await axios.post(`http://localhost:5000/api/forms${location.pathname}`, {
+        sessionType,
+        name,
+        email,
+        mobileNumber,
+        district
+      })
+    } catch (error) {
+      console.log(error);
+    }
 
     console.log("Session Type:", sessionType);
     console.log("Name:", name);
