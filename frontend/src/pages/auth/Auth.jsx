@@ -71,7 +71,6 @@ const Auth = () => {
               <div className="authInputs">
                 <form action="#" className="authForm">
                   <h2>Create Account</h2>
-                  <input className="authInput" type="text" placeholder="Name" />
                   <input
                     className="authInput"
                     type="email"

@@ -1,5 +1,4 @@
 const express = require('express');
-const mongoose = require('mongoose');
 const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const User = require('./models/User');
@@ -7,16 +6,12 @@ require("dotenv").config()
 const app = express();
 const authRoute = require('./routes/auth');
 const formsRoute = require('./routes/forms');
+const connectDB = require('./utils/db');
+
 
 // Middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-// app.use(session({
-//     secret: 'your_secret_key',
-//     resave: false,
-//     saveUninitialized: false,
-//     cookie: { secure: false }
-// }));
 app.use(passport.initialize());
 app.use(passport.session());
 
