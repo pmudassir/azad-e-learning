@@ -3,11 +3,13 @@ const User = require("../models/User");
 const CryptoJS = require("crypto-js");
 
 router.post("/register", async (req, res) => {
+    const { email, username, password } = req.body
+
     const newUser = new User({
-        username: req.body.username,
-        email: req.body.email,
+        email,
+        username,
         password: CryptoJS.AES.encrypt(
-            req.body.password,
+            password,
             process.env.PASS_SEC
         ).toString(),
     });
@@ -23,7 +25,9 @@ router.post("/register", async (req, res) => {
 //LOGIN
 router.post("/login", async (req, res) => {
     try {
-        const user = await User.findOne({ username: req.body.username })
+        const { username, password } = req.body
+
+        const user = await User.findOne({ username })
 
         if (!user) {
             res.status(401).json("Wrong Credentials!")
@@ -36,13 +40,12 @@ router.post("/login", async (req, res) => {
         );
         const Originalpassword = hashedPassword.toString(CryptoJS.enc.Utf8)
 
-        if (Originalpassword !== req.body.password) {
+        if (Originalpassword !== password) {
             res.status(401).json("Wrong Credentials!");
             return
         }
 
-        const { password, ...others } = user._doc;
-        res.status(200).json({ ...others });
+        res.status(200).json("Successful");
     }
     catch (err) {
         res.status(500).json(err)

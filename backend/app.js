@@ -6,6 +6,7 @@ const User = require('./models/User');
 require("dotenv").config()
 const app = express();
 const authRoute = require('./routes/auth');
+const formsRoute = require('./routes/forms');
 
 // Middleware
 app.use(express.urlencoded({ extended: true }));
@@ -54,16 +55,7 @@ passport.deserializeUser((user, done) => {
 
 // Routes
 app.use("/api/auth", authRoute);
-
-
-app.get("/", async (req, res) => {
-    if (req.user) {
-        const user = await User.findOne({ email: req.user.emails[0].value })
-        const admin = user?.isAdmin
-        return res.render("home", { user: req.user, admin })
-    }
-    res.render("home", { user: req.user })
-})
+app.use("/api/forms", formsRoute);
 
 app.get('/auth/google',
     passport.authenticate('google', { scope: ['profile', 'email'] })
@@ -75,54 +67,6 @@ app.get('/auth/google/azad',
         res.redirect('/');
     }
 );
-
-app.get("/login", (req, res) => {
-    res.render('login')
-})
-
-const ensureAuthenticated = (req, res, next) => {
-    if (req.isAuthenticated()) {
-        return next();
-    }
-    res.redirect('/login');
-};
-
-const ensureIsAdmin = async (req, res, next) => {
-    if (req.isAuthenticated()) {
-        if (req.user) {
-            const user = await User.findOne({ email: req.user.emails[0].value })
-            const admin = user.isAdmin
-            if (admin) {
-                next()
-            }
-            res.render("notAllowed")
-        }
-    }
-}
-
-app.get("/level1", ensureAuthenticated, (req, res) => {
-    res.render("level1", { user: req.user })
-})
-
-app.get("/ppttc", ensureAuthenticated, (req, res) => {
-    res.render("ppttc", { user: req.user })
-})
-
-app.get("/mttc", ensureAuthenticated, (req, res) => {
-    res.render("mttc", { user: req.user })
-})
-
-app.get("/hindi", ensureAuthenticated, (req, res) => {
-    res.render("hindi", { user: req.user })
-})
-
-app.get("/competitive", ensureAuthenticated, (req, res) => {
-    res.render("competitive", { user: req.user })
-})
-
-app.get("/admin", ensureIsAdmin, (req, res) => {
-    res.render("admin", { user: req.user })
-})
 
 app.get('/logout', (req, res) => {
     req.logout(() => {

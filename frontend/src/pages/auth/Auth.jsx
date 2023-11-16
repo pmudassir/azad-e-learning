@@ -2,9 +2,31 @@ import React, { useState } from "react";
 import "./auth.css";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
+import axios from "axios";
 
 const Auth = () => {
   const [isSignUp, setIsSignUP] = useState(true);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [username, setUsername] = useState("");
+
+  const handleSignup = async (e) => {
+    e.preventDefault();
+    try {
+      await axios.post("http://localhost:5000/api/auth/register", { email, username, password })
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  const handleSignin = async (e) => {
+    e.preventDefault();
+    try {
+      await axios.post("http://localhost:5000/api/auth/login", { username, password })
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
   return (
     <>
@@ -30,15 +52,17 @@ const Auth = () => {
                   <h2>Sign In</h2>
                   <input
                     className="authInput"
-                    type="email"
-                    placeholder="Your Email"
+                    type="username"
+                    placeholder="Username"
+                    onChange={(e) => setEmail(e.target.value)}
                   />
                   <input
                     className="authInput"
                     type="password"
                     placeholder="Password"
+                    onChange={(e) => setPassword(e.target.value)}
                   />
-                  <button className="submitButton" type="submit">
+                  <button className="submitButton" type="submit" onClick={handleSignin}>
                     Sign In
                   </button>
                 </form>
@@ -52,22 +76,24 @@ const Auth = () => {
                     className="authInput"
                     type="email"
                     placeholder="Email"
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                  <input
+                    className="authInput"
+                    type="username"
+                    placeholder="Username"
+                    onChange={(e) => setUsername(e.target.value)}
                   />
                   <input
                     className="authInput"
                     type="password"
                     placeholder="Password"
+                    onChange={(e) => setPassword(e.target.value)}
                   />
-                  <input
-                    className="authInput"
-                    type="password"
-                    placeholder="Repeat-password"
-                  />
-                  <button className="submitButton" type="submit">
+                  <button className="submitButton" type="submit" onClick={handleSignup}>
                     Sign Up
                   </button>
                 </form>
-
               </div>
             )}
           </div>
