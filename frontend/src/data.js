@@ -98,7 +98,7 @@ export const cardData = [
         imageUrl: "https://i.ibb.co/PhdRvqr/hindi.png",
     },
     {
-        id: 4,
+        id: 5,
         title: "Competitive Goals",
         link: "/competitive-goals",
         imageUrl:

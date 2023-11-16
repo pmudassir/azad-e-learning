@@ -4,12 +4,12 @@ import './about.css';
 const About = () => {
     return (
         <section className='about-effect'>
-            <div class="about-container">
-                <div class="about-elements">
-                    <h1 class="about-heading">
+            <div className="about-container">
+                <div className="about-elements">
+                    <h1 className="about-heading">
                         About Us
                     </h1>
-                    <p class="about-info">
+                    <p className="about-info">
                         Founded in the year 2000 as Azad College, Azad E-Learning has a rich history of providing quality
                         education. Our journey began offline, but we quickly adapted to the evolving educational landscape.
                         Now, as a pioneering force in basic education, we focus on English, Hindi, and Mathematics.
