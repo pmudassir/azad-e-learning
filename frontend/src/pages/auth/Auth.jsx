@@ -13,7 +13,7 @@ const Auth = () => {
   const handleSignup = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/api/auth/register", { email, username, password })
+      await axios.post("http://localhost:4000/api/auth/register", { email, username, password })
     } catch (error) {
       console.log(error);
     }
@@ -22,7 +22,7 @@ const Auth = () => {
   const handleSignin = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/api/auth/login", { username, password })
+      await axios.post("http://localhost:4000/api/auth/login", { username, password })
     } catch (error) {
       console.log(error);
     }
