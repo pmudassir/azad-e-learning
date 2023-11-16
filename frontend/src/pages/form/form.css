@@ -97,8 +97,6 @@ span {
     justify-content: center;
     flex-direction: column;
     margin: 0;
-    /* margin-inline: 10px; */
-    /* gap: 20px; */
   margin-top: 20px;
   column-gap: 0px;
   }
@@ -109,7 +107,6 @@ span {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* padding-inline: 20px; */
     width: 70vw;
   }
 

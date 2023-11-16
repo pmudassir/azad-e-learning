@@ -32,19 +32,13 @@ const Form = () => {
     } catch (error) {
       console.log(error);
     }
-
-    console.log("Session Type:", sessionType);
-    console.log("Name:", name);
-    console.log("Email:", email);
-    console.log("Mobile Number:", mobileNumber);
-    console.log("District:", district);
-
     setSessionType("");
     setName("");
     setEmail("");
     setMobileNumber("");
     setDistrict("");
   };
+
   return (
     <div>
       <Navbar />
