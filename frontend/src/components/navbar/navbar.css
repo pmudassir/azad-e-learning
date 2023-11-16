@@ -128,15 +128,12 @@
     top: 70px;
     right: 0;
     left: 0;
-    background: #a2cdac;
+    background: linear-gradient(to right, #6fe8a3, #01e066);
     width: 100%;
     flex-direction: column;
     align-items: center;
-    
-    .user{
-      display: none;
-    }
-  }
+    padding-bottom: 20px;
+  }  
 
   .link-section.show {
     display: flex;
@@ -148,7 +145,7 @@
 
   .menu {
     flex-direction: column;
-    padding: 20px 0;
+    padding: 10px 0;
   }
 
   .item {
@@ -156,5 +153,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    color: black;
+    font-weight: 700;
+  }
+
+  .authButton{
+    color: black;
+    font-weight: 700;
+    background-color: #05ff76;
   }
 }
