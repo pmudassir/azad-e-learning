@@ -99,13 +99,13 @@ span {
     margin: 0;
     /* margin-inline: 10px; */
     /* gap: 20px; */
-  margin-top: 20px;
-  column-gap: 0px;
+    margin-top: 20px;
+    column-gap: 0px;
   }
 
   .inputTextForm,
   .inputEmailForm,
-  .inputTelForm{
+  .inputTelForm {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -113,8 +113,10 @@ span {
     width: 70vw;
   }
 
-  select{
-    display: flex;align-items: center;justify-content: center;
+  select {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 76vw;
   }
 }

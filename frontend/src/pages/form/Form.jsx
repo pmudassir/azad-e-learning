@@ -119,8 +119,7 @@ const Form = () => {
                 </select>
               </div>
             </div>
-            <input
-              className="" type="submit" value="Submit" />
+            <input className="" type="submit" value="Submit" />
           </form>
         </div>
       </div>
