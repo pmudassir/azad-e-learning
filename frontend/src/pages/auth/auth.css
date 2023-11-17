@@ -116,3 +116,25 @@
 .submitButton:active {
   transform: scale(0.95);
 }
+
+
+
+@media(max-width:768px){
+.authBox {
+margin: 20px;
+flex-direction: column;
+height: auto;
+}
+
+.buttonsContainer{
+  width: 100%;
+}
+
+.inputAuthContainer{
+  margin-top: 20px;
+}
+
+.authInput {
+ width:60vw;
+}
+}

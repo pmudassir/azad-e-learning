@@ -8,6 +8,11 @@ const authRoute = require("./routes/auth");
 const formsRoute = require("./routes/forms");
 const connectDB = require("./utils/db");
 const session = require("express-session");
+const cors = require("cors");
+
+connectDB();
+
+app.use(cors());
 
 app.use(
   session({
