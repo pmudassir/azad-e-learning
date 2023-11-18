@@ -3,17 +3,21 @@ import "./auth.css";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const Auth = () => {
   const [isSignUp, setIsSignUP] = useState(true);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
+  
+  const navigate = useNavigate();
 
   const handleSignup = async (e) => {
     e.preventDefault();
     try {
       await axios.post("http://localhost:4000/api/auth/register", { email, username, password })
+      navigate("/");
     } catch (error) {
       console.log(error);
     }
@@ -23,6 +27,7 @@ const Auth = () => {
     e.preventDefault();
     try {
       await axios.post("http://localhost:4000/api/auth/login", { username, password })
+      navigate("/");
     } catch (error) {
       console.log(error);
     }
@@ -54,7 +59,7 @@ const Auth = () => {
                     className="authInput"
                     type="username"
                     placeholder="Username"
-                    onChange={(e) => setEmail(e.target.value)}
+                    onChange={(e) => setUsername(e.target.value)}
                   />
                   <input
                     className="authInput"

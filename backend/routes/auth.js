@@ -2,6 +2,7 @@ const router = require("express").Router();
 const User = require("../models/User");
 const CryptoJS = require("crypto-js");
 
+// REGISTER
 router.post("/register", async (req, res) => {
   const { email, username, password } = req.body;
 
@@ -12,9 +13,6 @@ router.post("/register", async (req, res) => {
   });
   try {
     const savedUser = await newUser.save();
-    console.log(newUser);
-
-    console.log("success");
     return res.status(201).json(savedUser);
   } catch (err) {
     console.log(err);
@@ -25,9 +23,9 @@ router.post("/register", async (req, res) => {
 //LOGIN
 router.use("/login", async (req, res) => {
   try {
-    const { email, password } = req.body;
+    const { username, password } = req.body;
 
-    const user = await User.findOne({ email });
+    const user = await User.findOne({ username });
 
     if (!user) {
       res.status(401).json("No user with this name, Wrong Credentials!");

@@ -10,6 +10,7 @@ const connectDB = require("./utils/db");
 const session = require("express-session");
 const cors = require("cors");
 
+// Connect to MongoDB
 connectDB();
 
 app.use(cors());
