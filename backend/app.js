@@ -33,15 +33,14 @@ passport.use(
     {
       clientID: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-      callbackURL: "http://localhost:3000/auth/google/azad",
+      callbackURL: "http://localhost:4000/auth/google/callback",
     },
     async (accessToken, refreshToken, profile, done) => {
       try {
-        const user = await User.findOne({ googleId: profile.id });
+        const user = await User.findOne({ email: profile.emails[0].value });
         if (!user) {
           const newUser = new User({
-            googleId: profile.id,
-            displayName: profile.displayName,
+            username: profile.displayName,
             email: profile.emails[0].value,
             image: profile.photos[0].value,
           });
@@ -75,10 +74,10 @@ app.get(
 );
 
 app.get(
-  "/auth/google/azad",
-  passport.authenticate("google", { failureRedirect: "/login" }),
+  "/auth/google/callback",
+  passport.authenticate("google", { failureRedirect: "/auth" }),
   (req, res) => {
-    res.redirect("/");
+    res.redirect("http://localhost:3000/");
   }
 );
 
