@@ -2,6 +2,7 @@ import React from "react";
 import "./competitiveGoals.css";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
+import axios from "axios";
 
 const goalsData = [
   {
@@ -42,6 +43,18 @@ const goalsData = [
 ];
 
 const CompetitiveGoals = () => {
+
+
+
+  const handleEnroll = async (course) => {
+    console.log(course);
+
+    try {
+      await axios.post("http://localhost:4000/api/course/goals", { course });
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <>
       <Navbar />
@@ -53,8 +66,9 @@ const CompetitiveGoals = () => {
           {goalsData.map((item, index) => (
             <div className="goalsCard" key={item.id}>
               <div
-                className={`cardContent ${index % 2 === 0 ? "normal" : "reversed"
-                  }`}
+                className={`cardContent ${
+                  index % 2 === 0 ? "normal" : "reversed"
+                }`}
               >
                 <div className="left">
                   <div className="details">
@@ -62,7 +76,10 @@ const CompetitiveGoals = () => {
                     <p>{item.desc}</p>
                   </div>
                   <div className="card-hover">
-                    <div className="enroll-button">
+                    <div
+                      className="enroll-button"
+                      onClick={() => handleEnroll(item.title)}
+                    >
                       Enroll Now
                       <span className="arrow">→</span>
                     </div>
