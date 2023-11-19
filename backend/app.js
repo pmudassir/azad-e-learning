@@ -6,6 +6,7 @@ require("dotenv").config();
 const app = express();
 const authRoute = require("./routes/auth");
 const formsRoute = require("./routes/forms");
+const courseRoute = require("./routes/course");
 const connectDB = require("./utils/db");
 const session = require("express-session");
 const cors = require("cors");
@@ -67,6 +68,7 @@ passport.deserializeUser((user, done) => {
 // Routes
 app.use("/api/auth", authRoute);
 app.use("/api/forms", formsRoute);
+app.use("/api/course", courseRoute);
 
 app.get(
   "/auth/google",
