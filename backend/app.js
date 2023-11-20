@@ -28,37 +28,8 @@ app.use(
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-passport.use(
-  new GoogleStrategy(
-    {
-      clientID: process.env.GOOGLE_CLIENT_ID,
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-      callbackURL: "http://localhost:4000/auth/google/callback",
-    },
-    async (accessToken, refreshToken, profile, done) => {
-      try {
-        const user = await User.findOne({ email: profile.emails[0].value });
-        if (!user) {
-          const newUser = new User({
-            username: profile.displayName,
-            email: profile.emails[0].value,
-            image: profile.photos[0].value,
-          });
-          const savedUser = await newUser.save();
-          const accessToken = jwt.sign({ userId: savedUser._id }, process.env.JWT_SECRET);
-          console.log(accessToken);
-          return done(null, profile, accessToken);
-        }
-        const accessToken = jwt.sign({ userId: user._id }, process.env.JWT_SECRET);
-        console.log(accessToken);
-        return done(null, profile, accessToken);
-      } catch (error) {
-        console.log(error);
-        return done(error);
-      }
-    }
-  )
-);
+// app.use(passport.initialize());
+// app.use(passport.session());
 
 // passport.use(
 //   new GoogleStrategy(
@@ -77,7 +48,7 @@ passport.use(
 //             image: profile.photos[0].value,
 //           });
 //           const savedUser = await newUser.save();
-//           const accessToken = jw.sign({ userId: savedUser._id }, process.env.JWT_SECRET);
+//           const accessToken = jwt.sign({ userId: savedUser._id }, process.env.JWT_SECRET);
 //           return done(null, profile, accessToken);
 //         }
 //         const accessToken = jwt.sign({ userId: user._id }, process.env.JWT_SECRET);
