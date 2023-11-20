@@ -45,10 +45,12 @@ passport.use(
             email: profile.emails[0].value,
             image: profile.photos[0].value,
           });
-          await newUser.save();
-          return done(null, profile);
+          const savedUser = await newUser.save();
+          const accessToken = jwt.sign({ userId: savedUser._id }, process.env.JWT_SECRET);
+          return done(null, profile, accessToken);
         }
-        return done(null, profile);
+        const accessToken = jwt.sign({ userId: user._id }, process.env.JWT_SECRET);
+        return done(null, profile, accessToken);
       } catch (error) {
         console.log(error);
         return done(error);

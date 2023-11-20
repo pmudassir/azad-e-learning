@@ -18,7 +18,7 @@ router.post("/register", async (req, res) => {
     return res.status(201).json({ token, savedUser });
   } catch (err) {
     console.log(err);
-    return res.status(500).json(err);
+    return res.status(500).json(err); 
   }
 });
 
@@ -44,8 +44,8 @@ router.use("/login", async (req, res) => {
       res.status(401).json("not matching Password,Wrong Credentials!");
       return;
     }
-
-    res.status(200).json("Successful");
+    const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET);
+    res.status(200).json({user, token});
   } catch (err) {
     res.status(500).json(err);
   }
