@@ -4,6 +4,8 @@ import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from 'react-redux';
+import { addEmail } from '../../store/userSlice';
 
 const Auth = () => {
   const [isSignUp, setIsSignUP] = useState(true);
@@ -13,11 +15,13 @@ const Auth = () => {
   const [errorMessage, setErrorMessage] = useState('');
 
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const handleSignUp = async (e) => {
     e.preventDefault();
     try {
       await axios.post("http://localhost:4000/api/auth/register", { email, username, password })
+      dispatch(addEmail(email));
       navigate("/");
     } catch (error) {
       if (error.response) {
@@ -30,6 +34,7 @@ const Auth = () => {
     e.preventDefault();
     try {
       await axios.post("http://localhost:4000/api/auth/login", { email, password })
+      dispatch(addEmail(email));
       navigate("/");
     } catch (error) {
       if (error.response) {

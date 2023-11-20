@@ -1,14 +1,23 @@
 import { useState } from "react";
 import "./navbar.css";
 import { Link } from "react-router-dom";
+import { resetUser } from "../../store/userSlice";
+import { useDispatch } from "react-redux";
+import { useSelector } from 'react-redux';
+import Avatar from '@mui/material/Avatar';
 
 const Navbar = () => {
-  const [user, setUser] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
 
+  const dispatch = useDispatch();
+  const user = useSelector((state) => state.user);
+
   const logout = () => {
-    setUser(false);
+    dispatch(resetUser())
   };
+
+  const letter = ""
+  console.log(user);
 
   return (
     <div className="navbar">
@@ -34,11 +43,7 @@ const Navbar = () => {
               <button onClick={logout} className="authButton">
                 Logout
               </button>
-              <img
-                alt="user-profile"
-                className="avatar-image"
-                src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60"
-              />
+              <Avatar sx={{ marginLeft: "10px" }}>{letter}</Avatar>
             </>
           ) : (
             <Link to={"/auth"}>
