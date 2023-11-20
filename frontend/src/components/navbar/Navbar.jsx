@@ -1,15 +1,10 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./navbar.css";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [user, setUser] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
-
-  useEffect(() => {
-    const { displayName, email, photoURL } = new URLSearchParams(window.location.search);
-    console.log(displayName, email, photoURL);
-  }, [])
 
   const logout = () => {
     setUser(false);
