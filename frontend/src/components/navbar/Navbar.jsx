@@ -9,9 +9,12 @@ import Avatar from '@mui/material/Avatar';
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
 
+<<<<<<< HEAD
   const dispatch = useDispatch();
   const user = useSelector((state) => state.user);
 
+=======
+>>>>>>> 1698468 (auth err msgs done)
   const logout = () => {
     dispatch(resetUser())
   };

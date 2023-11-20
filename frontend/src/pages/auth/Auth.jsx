@@ -21,7 +21,10 @@ const Auth = () => {
     e.preventDefault();
     try {
       await axios.post("http://localhost:4000/api/auth/register", { email, username, password })
+<<<<<<< HEAD
       dispatch(addEmail(email));
+=======
+>>>>>>> 1698468 (auth err msgs done)
       navigate("/");
     } catch (error) {
       if (error.response) {
@@ -34,7 +37,10 @@ const Auth = () => {
     e.preventDefault();
     try {
       await axios.post("http://localhost:4000/api/auth/login", { email, password })
+<<<<<<< HEAD
       dispatch(addEmail(email));
+=======
+>>>>>>> 1698468 (auth err msgs done)
       navigate("/");
     } catch (error) {
       if (error.response) {
