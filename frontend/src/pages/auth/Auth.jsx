@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./auth.css";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
@@ -10,51 +10,33 @@ const Auth = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
+  const [errorMessage, setErrorMessage] = useState('');
 
   const navigate = useNavigate();
 
-  const handleSignup = async (e) => {
+  const handleSignUp = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:4000/api/auth/register", {
-        email,
-        username,
-        password,
-      });
+      await axios.post("http://localhost:4000/api/auth/register", { email, username, password })
       navigate("/");
     } catch (error) {
-      console.log(error);
+      if (error.response) {
+        setErrorMessage(error.response.data.message);
+      }
     }
-  };
+  }
 
-  const handleSignin = async (e) => {
+  const handleSignIn = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:4000/api/auth/login", {
-        email,
-        password,
-      });
+      await axios.post("http://localhost:4000/api/auth/login", { email, password })
       navigate("/");
     } catch (error) {
-      console.log(error);
+      if (error.response) {
+        setErrorMessage(error.response.data.message);
+      }
     }
-  };
-
-  const handleGoogleLogin = () => {
-    window.location.href = 'http://localhost:4000/auth/google';
-    console.log("here");
-  };
-
-  useEffect(()=>{
-    axios.get('http://localhost:4000/auth/google/callback')
-    .then(response => {
-      console.log(response.data);
-      navigate("/");
-    })
-    .catch(error => {
-      console.error(error);
-    });
-},[navigate])
+  }
 
   return (
     <>
@@ -68,9 +50,9 @@ const Auth = () => {
             <button className="authButtons" onClick={() => setIsSignUP(false)}>
               Sign Up
             </button>
-            <button className="authButtons" onClick={handleGoogleLogin}>
+            {/* <button className="authButtons" onClick={() => setIsSignUP(false)}>
               Sign Up with Google
-            </button>
+            </button> */}
           </div>
 
           <div className="inputAuthContainer">
@@ -90,19 +72,16 @@ const Auth = () => {
                     placeholder="Password"
                     onChange={(e) => setPassword(e.target.value)}
                   />
-                  <button
-                    className="submitButton"
-                    type="submit"
-                    onClick={handleSignin}
-                  >
+                  <button className="submitButton" type="submit" onClick={handleSignIn}>
                     Sign In
                   </button>
                 </form>
+                {errorMessage && <p style={{ color: 'red', fontSize: '12px' }}>{errorMessage}</p>}
               </div>
             ) : (
               <div className="authInputs">
                 <form action="#" className="authForm">
-                  <h2>Create Account</h2>
+                  <h2>Create an Account</h2>
                   <input
                     className="authInput"
                     type="email"
@@ -121,13 +100,10 @@ const Auth = () => {
                     placeholder="Password"
                     onChange={(e) => setPassword(e.target.value)}
                   />
-                  <button
-                    className="submitButton"
-                    type="submit"
-                    onClick={handleSignup}
-                  >
+                  <button className="submitButton" type="submit" onClick={handleSignUp}>
                     Sign Up
                   </button>
+                  {errorMessage && <p style={{ color: 'red', fontSize: '12px' }}>{errorMessage}</p>}
                 </form>
               </div>
             )}
