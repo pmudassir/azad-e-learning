@@ -31,7 +31,7 @@ const Auth = () => {
     e.preventDefault();
     try {
       await axios.post("http://localhost:4000/api/auth/login", {
-        username,
+        email,
         password,
       });
       navigate("/");
@@ -80,9 +80,9 @@ const Auth = () => {
                   <h2>Sign In</h2>
                   <input
                     className="authInput"
-                    type="username"
-                    placeholder="Username"
-                    onChange={(e) => setUsername(e.target.value)}
+                    type="email"
+                    placeholder="Email"
+                    onChange={(e) => setEmail(e.target.value)}
                   />
                   <input
                     className="authInput"
