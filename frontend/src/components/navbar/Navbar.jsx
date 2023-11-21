@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./navbar.css";
+
 import { Link, useNavigate } from "react-router-dom";
 import { resetUser } from "../../store/userSlice";
 import { useDispatch } from "react-redux";
@@ -8,17 +9,20 @@ import Avatar from "@mui/material/Avatar";
 
 const Navbar = () => {
   const navigate = useNavigate();
+
   const [showMenu, setShowMenu] = useState(false);
 
   const dispatch = useDispatch();
   const user = useSelector((state) => state.user);
 
   const logout = () => {
+
     dispatch(resetUser());
     navigate("/");
   };
 
   console.log(user,"herer");
+
 
   return (
     <div className="navbar">
@@ -44,9 +48,11 @@ const Navbar = () => {
               <button onClick={logout} className="authButton">
                 Logout
               </button>
+
               <Avatar sx={{ marginLeft: "10px", backgroundColor: "purple" }}>
                 {user?.email.charAt(0)}
               </Avatar>
+
             </>
           ) : (
             <Link to={"/auth"}>
