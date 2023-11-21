@@ -4,10 +4,9 @@ const router = express.Router();
 
 router.post("/ppttc", async (req, res) => {
   try {
-    const { sessionType, name, email, mobileNumber, district } = req.body;
-    console.log(req);
-    const user = await User.findOne({ email: userEmail });
-    const userId = user._id.valueOf();
+    const { user, sessionType, name, email, mobileNumber, district } = req.body;
+    const userMail = await User.findOne({ email: user });
+    const userId = userMail._id.valueOf();
     const formData = {
       name,
       mobileNumber,
@@ -26,14 +25,13 @@ router.post("/ppttc", async (req, res) => {
     console.log(error);
     return res
       .status(500)
-      .send("An error occurred while submitting form", error);
+      .send("An error occurred while submitting form");
   }
 });
 
 router.post("/mttc", async (req, res) => {
   try {
-    const {user, sessionType, name, email, mobileNumber, district } = req.body;
-    console.log(user);
+    const { user, sessionType, name, email, mobileNumber, district } = req.body;
     const userMail = await User.findOne({ email: user });
     const userId = userMail._id.valueOf();
     const formData = {
@@ -58,12 +56,11 @@ router.post("/mttc", async (req, res) => {
   }
 });
 
-router.post("/hindi", async (req, res) => {
+router.post("/httc", async (req, res) => {
   try {
-    const { sessionType, name, email, mobileNumber, district } = req.body;
-    const userEmail = req.user.emails[0].value;
-    const user = await User.findOne({ email: userEmail });
-    const userId = user._id.valueOf();
+    const { user, sessionType, name, email, mobileNumber, district } = req.body;
+    const userMail = await User.findOne({ email: user });
+    const userId = userMail._id.valueOf();
     const formData = {
       name,
       mobileNumber,
