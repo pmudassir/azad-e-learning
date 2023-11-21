@@ -2,16 +2,23 @@ const express = require("express");
 const User = require("../models/User");
 const router = express.Router();
 
-router.post("/goals", async (req, res) => {
-  const { course } = req.body;
-
-  console.log(course);
-});
-
 router.post("/", async (req, res) => {
-  const { subject, level } = req.body;
+  try {
+    const {user, course } = req.body;
+    
+    
+    const userEmail = await User.findOne({email:user})
+    const userId = userEmail._id.valueOf()
+    
+    await User.findByIdAndUpdate(
+      userId,{$push:{courses:course}},{new:true}
+      )
 
-  console.log(subject, level);
+      return res.status(200).json("Form Submitted");
+    } catch (error) {
+      res.status(500).json("An error occurred")
+    }
+
 });
 
 module.exports = router;
