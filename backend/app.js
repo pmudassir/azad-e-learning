@@ -10,6 +10,7 @@ const courseRoute = require("./routes/course");
 const connectDB = require("./utils/db");
 const session = require("express-session");
 const cors = require("cors");
+const jwt = require("jsonwebtoken");
 
 // Connect to MongoDB
 connectDB();
@@ -47,7 +48,9 @@ app.use(express.json());
 //             image: profile.photos[0].value,
 //           });
 //           const savedUser = await newUser.save();
+
 //           const accessToken = jw.sign({ userId: savedUser._id }, process.env.JWT_SECRET);
+
 //           return done(null, profile, accessToken);
 //         }
 //         const accessToken = jwt.sign({ userId: user._id }, process.env.JWT_SECRET);
