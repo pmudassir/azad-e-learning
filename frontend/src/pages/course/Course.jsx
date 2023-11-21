@@ -11,10 +11,10 @@ const Course = () => {
   const user = useSelector((state) => state.user.email);
 
   const handleEnroll = async (subject, level) => {
-    console.log(subject, level);
-
+    const course = { [subject]: { level } };
+    console.log(course);
     try {
-      await axios.post("http://localhost:4000/api/course/", { subject, level });
+      await axios.post("http://localhost:4000/api/course/", { user,course });
     } catch (error) {
       console.log(error);
     }
@@ -27,7 +27,7 @@ const Course = () => {
       </div>
       <div className="courseContainer">
         {courseData.map((item, index) => (
-          <div>
+          <div >
             <h2 className="courseSubject">{item.subject}</h2>
             {item.levels.map((course) => (
               <div key={course.level} className="courses">
