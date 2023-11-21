@@ -32,10 +32,10 @@ router.post("/ppttc", async (req, res) => {
 
 router.post("/mttc", async (req, res) => {
   try {
-    const { sessionType, name, email, mobileNumber, district } = req.body;
-    const userEmail = req.user.emails[0].value;
-    const user = await User.findOne({ email: userEmail });
-    const userId = user._id.valueOf();
+    const {user, sessionType, name, email, mobileNumber, district } = req.body;
+    console.log(user);
+    const userMail = await User.findOne({ email: user });
+    const userId = userMail._id.valueOf();
     const formData = {
       name,
       mobileNumber,

@@ -10,7 +10,7 @@ const userSlice = createSlice({
             state.email = action.payload
         },
         resetUser(state) {
-            state.email = ""
+            state.email = null
         }
     }
 })

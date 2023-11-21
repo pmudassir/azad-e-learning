@@ -34,18 +34,11 @@ router.post("/register", async (req, res) => {
 router.use("/login", async (req, res) => {
   try {
     const { email, password } = req.body;
-<<<<<<< HEAD
-    const user = await User.findOne({ email });
-
-    if (!user) {
-      res.status(401).json(`No user with ${user} this name, Wrong Credentials!`);
-=======
 
     const user = await User.findOne({ email });
 
     if (!user) {
       res.status(401).json({ message: "No user with this email! Try signing up." });
->>>>>>> 1698468 (auth err msgs done)
       return;
     }
 
