@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import "./admin.css";
 import axios from "axios";
-import { useSelector } from "react-redux";
 import { DataGrid } from "@mui/x-data-grid";
 
 const columns = [

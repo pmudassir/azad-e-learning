@@ -33,7 +33,6 @@ router.post("/mttc", async (req, res) => {
   try {
     const { user, sessionType, name, email, mobileNumber, district } = req.body;
 
-
     const userMail = await User.findOne({ email: user });
     const userId = userMail._id.valueOf();
     const formData = {

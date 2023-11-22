@@ -70,7 +70,7 @@ const Footer = () => {
                 <a href="/">Blog</a>
               </li>
               <li>
-               <Link to="/admin"> <a href="/">Admin</a></Link>
+                <Link to="/admin"> <a href="/">Admin</a></Link>
               </li>
               <li>
                 <a href="/">App Login</a>

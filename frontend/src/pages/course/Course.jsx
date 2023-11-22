@@ -12,9 +12,8 @@ const Course = () => {
 
   const handleEnroll = async (subject, level) => {
     const course = { [subject]: { level } };
-    console.log(course);
     try {
-      await axios.post("http://localhost:4000/api/course/", { user,course });
+      await axios.post("http://localhost:4000/api/course/", { user, course });
     } catch (error) {
       console.log(error);
     }

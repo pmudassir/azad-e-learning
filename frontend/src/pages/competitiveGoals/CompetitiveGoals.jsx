@@ -43,12 +43,11 @@ const goalsData = [
 ];
 
 const CompetitiveGoals = () => {
-  const navigate = useNavigate();
-
   const user = useSelector((state) => state.user.email);
 
-  const handleEnroll = async (course) => {
+  const navigate = useNavigate();
 
+  const handleEnroll = async (course) => {
     try {
       await axios.post("http://localhost:4000/api/course/", { user, course });
     } catch (error) {
@@ -67,9 +66,8 @@ const CompetitiveGoals = () => {
         {goalsData.map((item, index) => (
           <div className="goalsCard" key={item.id}>
             <div
-              className={`cardContent ${
-                index % 2 === 0 ? "normal" : "reversed"
-              }`}
+              className={`cardContent ${index % 2 === 0 ? "normal" : "reversed"
+                }`}
             >
               <div className="left">
                 <div className="details">
