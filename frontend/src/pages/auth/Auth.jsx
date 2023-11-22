@@ -20,13 +20,12 @@ const Auth = () => {
   const handleSignUp = async (e) => {
     e.preventDefault();
     try {
-
-      await axios.post("http://localhost:4000/api/auth/register", {
+      const res = await axios.post("http://localhost:4000/api/auth/register", {
         email,
         username,
         password,
       });
-
+      console.log(res.data);
       dispatch(addEmail(email));
       navigate("/");
     } catch (error) {
@@ -39,12 +38,13 @@ const Auth = () => {
   const handleSignIn = async (e) => {
     e.preventDefault();
     try {
-
-      await axios.post("http://localhost:4000/api/auth/login", {
+      const res = await axios.post("http://localhost:4000/api/auth/login", {
         email,
         password,
       });
-
+      console.log(res.data.accessToken);
+      const accessToken = res.data.accessToken
+      axios.defaults.headers.common['Authorization'] = accessToken
       dispatch(addEmail(email));
       navigate("/");
     } catch (error) {
@@ -52,7 +52,6 @@ const Auth = () => {
         setErrorMessage(error.response.data.message);
       }
     }
-
   };
 
   return (

@@ -34,20 +34,17 @@ const rows = [
 ];
 
 const Admin = () => {
-  const user = useSelector((state) => state.user.email);
-
   useEffect(() => {
     const getUsers = async () => {
       try {
-        console.log(user);
-        await axios.get("http://localhost:4000/api/users", { user });
+        const res = await axios.get("http://localhost:4000/api/users");
+        console.log(res);
       } catch (error) {
         console.log(error);
       }
     };
-
     getUsers();
-  });
+  }, []);
 
   return (
     <div style={{ height: "auto", width: "100%" }}>

@@ -22,7 +22,8 @@ router.post("/register", async (req, res) => {
 
     const savedUser = await newUser.save();
     const token = jwt.sign({ userId: savedUser._id }, process.env.JWT_SECRET);
-    return res.status(201).json({ token, savedUser });
+
+    return res.status(201).json({ token, savedUser }).setHeader('Authorization', `Bearer ${token}`);
   } catch (err) {
     console.log(err);
     return res.status(500).json(err);
@@ -30,7 +31,7 @@ router.post("/register", async (req, res) => {
 });
 
 //LOGIN
-router.use("/login", async (req, res) => {
+router.post("/login", async (req, res) => {
   try {
     const { email, password } = req.body;
 
@@ -45,16 +46,23 @@ router.use("/login", async (req, res) => {
       user.password,
       process.env.PASS_SEC
     );
-    const Originalpassword = hashedPassword.toString(CryptoJS.enc.Utf8);
+    const originalPassword = hashedPassword.toString(CryptoJS.enc.Utf8);
 
-    if (Originalpassword !== password) {
+    if (originalPassword !== password) {
       res.status(401).json({ message: "Email or Password doesn't match!" });
       return;
     }
-    const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET);
-    res.status(200).json({ user, token });
+    const accessToken = jwt.sign(
+      {
+        id: user._id,
+        isAdmin: user.isAdmin,
+      }, process.env.JWT_SECRET,
+      { expiresIn: "3d" }
+    )
+
+    return res.status(200).json({ user, accessToken });
   } catch (err) {
-    res.status(500).json(err);
+    return res.status(500).json(err);
   }
 });
 

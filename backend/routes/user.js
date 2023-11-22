@@ -1,15 +1,14 @@
 const User = require("../models/User");
 const router = require("express").Router();
+const verifyAdmin = require("../middleware/verifyAdmin");
 
-router.get("/", async (req, res) => {
+router.get("/", verifyAdmin, async (req, res) => {
   try {
-    const { user } = req;
-    console.log(req.body);
-    const userEmail = await User.findOne({ email: user });
-    console.log(userEmail);
+    const users = await User.find();
+    console.log(users);
+    return res.status(200).json(users);
   } catch (error) {
-    console.log(error);
-    res.status(500).json("error occupation");
+    res.status(500).json("error while fetching users");
   }
 });
 
