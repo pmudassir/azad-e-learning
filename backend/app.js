@@ -7,6 +7,7 @@ const app = express();
 const authRoute = require("./routes/auth");
 const formsRoute = require("./routes/forms");
 const courseRoute = require("./routes/course");
+const userRoute = require("./routes/user");
 const connectDB = require("./utils/db");
 const session = require("express-session");
 const cors = require("cors");
@@ -75,6 +76,7 @@ app.use(express.json());
 app.use("/api/auth", authRoute);
 app.use("/api/forms", formsRoute);
 app.use("/api/course", courseRoute);
+app.use("/api/users",userRoute)
 
 // app.get(
 //   "/auth/google",
