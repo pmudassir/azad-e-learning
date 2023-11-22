@@ -3,6 +3,7 @@ import "./competitiveGoals.css";
 import { useSelector } from "react-redux";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import swal from 'sweetalert';
 
 const goalsData = [
   {
@@ -50,12 +51,16 @@ const CompetitiveGoals = () => {
   const handleEnroll = async (course) => {
     try {
       await axios.post("http://localhost:4000/api/course/", { user, course });
+      swal({
+        title: "Enrolled!",
+        text: "You successfully enrolled to the course!",
+        icon: "success",
+        button: "Done!",
+      });
     } catch (error) {
       console.log(error);
     }
   };
-
-  navigate("/auth");
 
   return (
     <div className="goalsContainer">

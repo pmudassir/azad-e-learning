@@ -3,6 +3,7 @@ import "./form.css";
 import { useSelector } from "react-redux";
 import axios from "axios";
 import { useLocation, useNavigate } from "react-router-dom";
+import swal from 'sweetalert';
 
 const Form = () => {
   const [sessionType, setSessionType] = useState("");
@@ -30,6 +31,12 @@ const Form = () => {
         email,
         mobileNumber,
         district,
+      });
+      swal({
+        title: "Submitted!",
+        text: "You successfully submitted the form!",
+        icon: "success",
+        button: "Done!",
       });
     } catch (error) {
       console.log(error);
