@@ -11,8 +11,9 @@ const columns = [
     headerName: "Difficulty",
     width: 300,
     valueGetter: (params) => {
-      const courses = params.row.courses.filter(course => "English" in course)
-  .map(course => course.English.level)[0];
+      const courses = params.row.courses
+        .filter((course) => "English" in course)
+        .map((course) => course.English.level)[0];
 
       return courses;
     },
@@ -32,7 +33,6 @@ const English = () => {
           id: index + 1,
         }));
 
-        console.log(res.data);
         setUsers(data);
       } catch (error) {
         console.log(error);
