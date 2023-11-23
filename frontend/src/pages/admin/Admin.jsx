@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./admin.css";
-import axios from "axios";
-import { useSelector } from "react-redux";
 import Competitive from "./components/competitive/competitive";
 import English from "./components/courses/English";
 import Hindi from "./components/courses/Hindi";
