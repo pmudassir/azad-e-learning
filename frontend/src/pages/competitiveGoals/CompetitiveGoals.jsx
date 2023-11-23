@@ -46,9 +46,9 @@ const goalsData = [
 const CompetitiveGoals = () => {
   const user = useSelector((state) => state.user.email);
 
-  const navigate = useNavigate();
+  const handleEnroll = async (competitive) => {
+const course = {competitive}
 
-  const handleEnroll = async (course) => {
     try {
       await axios.post("http://localhost:4000/api/course/", { user, course });
       swal({

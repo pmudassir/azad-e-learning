@@ -1,5 +1,17 @@
 .adminHeader{
     text-align: center;
     padding: 40px;
+    font-size: 40px;
     color: #0b2e01;
+}
+
+.table-main-header{
+    text-align: center;
+    font-weight: normal;
+    padding: 20px;
+
+}
+
+.table-header{
+    padding: 20px;
 }

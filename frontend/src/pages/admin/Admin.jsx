@@ -1,11 +1,14 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./admin.css";
-import axios from "axios";
-import { DataGrid } from "@mui/x-data-grid";
+import Competitive from "./components/competitive/competitive";
+import English from "./components/courses/English";
+import Hindi from "./components/courses/Hindi";
+import Math from "./components/courses/Math";
+
 
 const columns = [
-  { field: "id", headerName: "ID", width: 70 },
-  { field: "firstName", headerName: "First name", width: 130 },
+  { field: "_id", headerName: "ID", width: 70 },
+  { field: "username", headerName: "First name", width: 130 },
   { field: "courses", headerName: "Courses", width: 130 },
   {
     field: "age",
@@ -30,39 +33,134 @@ const rows = [
   { id: 3, lastName: "Lannister", firstName: "Jaime", age: 45 },
   { id: 4, lastName: "Stark", firstName: "Arya", age: 16 },
   { id: 5, lastName: "Targaryen", firstName: "Daenerys", age: null },
-  { id: 6, lastName: "Melisandre", firstName: "unda", age: 150 },
-  { id: 7, lastName: "Clifford", firstName: "Ferrara", age: 44 },
-  { id: 8, lastName: "Frances", firstName: "Rossini", age: 36 },
-  { id: 9, lastName: "Roxie", firstName: "Harvey", age: 65 },
 ];
 
 const Admin = () => {
-  useEffect(() => {
-    const getUsers = async () => {
-      try {
-        const res = await axios.get("http://localhost:4000/api/users");
-        console.log(res);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    getUsers();
-  }, []);
 
   return (
     <div style={{ height: "auto", width: "100%" }}>
       <h1 className="adminHeader">Admin Panel</h1>
-      <DataGrid
-        rows={rows}
-        columns={columns}
-        initialState={{
-          pagination: {
-            paginationModel: { page: 0, pageSize: 8 },
-          },
-        }}
-        pageSizeOptions={[5, 10]}
-        checkboxSelection
-      />
+
+      <h2 className="table-main-header">Competitive Goals</h2>
+     <Competitive /> 
+      <h2 className="table-main-header">Courses</h2>
+      <English />
+      <Hindi />
+      <Math /> 
+     
+     
+      {/* <div className="admin-table">
+        <h3 className="table-header">HTTC</h3>
+        <DataGrid
+          rows={rows}
+          columns={columns}
+          initialState={{
+            pagination: {
+              paginationModel: { page: 0, pageSize: 8 },
+            },
+          }}
+          pageSizeOptions={[5, 10]}
+          checkboxSelection
+        />
+      </div>
+      <div className="admin-table">
+        <h3 className="table-header">MTTC</h3>
+        <DataGrid
+          rows={rows}
+          columns={columns}
+          initialState={{
+            pagination: {
+              paginationModel: { page: 0, pageSize: 8 },
+            },
+          }}
+          pageSizeOptions={[5, 10]}
+          checkboxSelection
+        />
+      </div>
+      <div className="admin-table">
+        <h3 className="table-header">PPTTC</h3>
+        <DataGrid
+          rows={rows}
+          columns={columns}
+          initialState={{
+            pagination: {
+              paginationModel: { page: 0, pageSize: 8 },
+            },
+          }}
+          pageSizeOptions={[5, 10]}
+          checkboxSelection
+        />
+      </div>
+      <div className="admin-table">
+        <h3 className="table-header">LSS</h3>
+        <DataGrid
+          rows={rows}
+          columns={columns}
+          initialState={{
+            pagination: {
+              paginationModel: { page: 0, pageSize: 8 },
+            },
+          }}
+          pageSizeOptions={[5, 10]}
+          checkboxSelection
+        />
+      </div>
+      <div className="admin-table">
+        <h3 className="table-header">USS</h3>
+        <DataGrid
+          rows={rows}
+          columns={columns}
+          initialState={{
+            pagination: {
+              paginationModel: { page: 0, pageSize: 8 },
+            },
+          }}
+          pageSizeOptions={[5, 10]}
+          checkboxSelection
+        />
+      </div>
+      <div className="admin-table">
+        <h3 className="table-header">NUMATS</h3>
+        <DataGrid
+          rows={rows}
+          columns={columns}
+          initialState={{
+            pagination: {
+              paginationModel: { page: 0, pageSize: 8 },
+            },
+          }}
+          pageSizeOptions={[5, 10]}
+          checkboxSelection
+        />
+      </div>
+      <div className="admin-table">
+        <h3 className="table-header">NMMS</h3>
+        <DataGrid
+          rows={rows}
+          columns={columns}
+          initialState={{
+            pagination: {
+              paginationModel: { page: 0, pageSize: 8 },
+            },
+          }}
+          pageSizeOptions={[5, 10]}
+          checkboxSelection
+        />
+      </div>
+      <div className="admin-table">
+        <h3 className="table-header">NTSE</h3>
+        <DataGrid
+          rows={rows}
+          columns={columns}
+          initialState={{
+            pagination: {
+              paginationModel: { page: 0, pageSize: 8 },
+            },
+          }}
+          pageSizeOptions={[5, 10]}
+          checkboxSelection
+        />
+      </div> */}
     </div>
   );
 };

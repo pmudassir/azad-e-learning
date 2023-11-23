@@ -24,6 +24,7 @@ const Auth = () => {
         username,
         password,
       });
+
       const accessToken = res.data.accessToken
       axios.defaults.headers.common['Authorization'] = accessToken
       dispatch(addEmail(email));
@@ -42,6 +43,7 @@ const Auth = () => {
         email,
         password,
       });
+
       const accessToken = res.data.accessToken
       axios.defaults.headers.common['Authorization'] = accessToken
       dispatch(addEmail(email));
