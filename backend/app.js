@@ -13,6 +13,7 @@ connectDB();
 
 app.use(cors());
 
+// Middleware
 app.use(
   session({
     secret: process.env.SESSION_SECRET_KEY,
@@ -20,7 +21,6 @@ app.use(
     saveUninitialized: true,
   })
 );
-// Middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 

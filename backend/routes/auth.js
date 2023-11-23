@@ -29,6 +29,7 @@ router.post("/register", async (req, res) => {
       .status(201)
       .json({ token, savedUser })
       .setHeader("Authorization", `Bearer ${token}`);
+
   } catch (err) {
     console.log(err);
     return res.status(500).json(err);
@@ -54,6 +55,7 @@ router.post("/login", async (req, res) => {
       process.env.PASS_SEC
     );
 
+
     const originalPassword = hashedPassword.toString(CryptoJS.enc.Utf8);
 
     if (originalPassword !== password) {
@@ -69,6 +71,7 @@ router.post("/login", async (req, res) => {
       process.env.JWT_SECRET,
       { expiresIn: "3d" }
     );
+
 
     return res.status(200).json({ user, accessToken });
   } catch (err) {

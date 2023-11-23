@@ -8,21 +8,16 @@ import { useSelector } from "react-redux";
 import Avatar from "@mui/material/Avatar";
 
 const Navbar = () => {
-  const navigate = useNavigate();
-
   const [showMenu, setShowMenu] = useState(false);
-
-  const dispatch = useDispatch();
   const user = useSelector((state) => state.user);
 
-  const logout = () => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
 
+  const logout = () => {
     dispatch(resetUser());
     navigate("/");
   };
-
-  console.log(user,"herer");
-
 
   return (
     <div className="navbar">

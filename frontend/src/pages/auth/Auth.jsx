@@ -13,7 +13,6 @@ const Auth = () => {
   const [username, setUsername] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
 
-
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -25,7 +24,9 @@ const Auth = () => {
         username,
         password,
       });
-      console.log(res.data);
+
+      const accessToken = res.data.accessToken
+      axios.defaults.headers.common['Authorization'] = accessToken
       dispatch(addEmail(email));
       navigate("/");
     } catch (error) {
@@ -42,7 +43,7 @@ const Auth = () => {
         email,
         password,
       });
-      console.log(res.data.accessToken);
+
       const accessToken = res.data.accessToken
       axios.defaults.headers.common['Authorization'] = accessToken
       dispatch(addEmail(email));
@@ -64,11 +65,7 @@ const Auth = () => {
           <button className="authButtons" onClick={() => setIsSignUP(false)}>
             Sign Up
           </button>
-          {/* <button className="authButtons" onClick={() => setIsSignUP(false)}>
-              Sign Up with Google
-            </button> */}
         </div>
-
         <div className="inputAuthContainer">
           {isSignUp ? (
             <div className="authInputs">

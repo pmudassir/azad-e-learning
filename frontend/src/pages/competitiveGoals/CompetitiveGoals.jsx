@@ -3,6 +3,7 @@ import "./competitiveGoals.css";
 import { useSelector } from "react-redux";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import swal from 'sweetalert';
 
 const goalsData = [
   {
@@ -43,20 +44,23 @@ const goalsData = [
 ];
 
 const CompetitiveGoals = () => {
-  const navigate = useNavigate();
-
   const user = useSelector((state) => state.user.email);
 
   const handleEnroll = async (competitive) => {
 const course = {competitive}
+
     try {
       await axios.post("http://localhost:4000/api/course/", { user, course });
+      swal({
+        title: "Enrolled!",
+        text: "You successfully enrolled to the course!",
+        icon: "success",
+        button: "Done!",
+      });
     } catch (error) {
       console.log(error);
     }
   };
-
-  navigate("/auth");
 
   return (
     <div className="goalsContainer">
@@ -67,9 +71,8 @@ const course = {competitive}
         {goalsData.map((item, index) => (
           <div className="goalsCard" key={item.id}>
             <div
-              className={`cardContent ${
-                index % 2 === 0 ? "normal" : "reversed"
-              }`}
+              className={`cardContent ${index % 2 === 0 ? "normal" : "reversed"
+                }`}
             >
               <div className="left">
                 <div className="details">
