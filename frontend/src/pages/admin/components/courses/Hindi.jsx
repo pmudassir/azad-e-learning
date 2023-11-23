@@ -34,7 +34,6 @@ const Hindi = () => {
           id: index + 1,
         }));
 
-        console.log(res.data);
         setUsers(data);
       } catch (error) {
         console.log(error);

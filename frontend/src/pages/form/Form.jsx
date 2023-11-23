@@ -3,7 +3,7 @@ import "./form.css";
 import { useSelector } from "react-redux";
 import axios from "axios";
 import { useLocation, useNavigate } from "react-router-dom";
-import swal from 'sweetalert';
+import swal from "sweetalert";
 
 const Form = () => {
   const [sessionType, setSessionType] = useState("");
@@ -11,6 +11,8 @@ const Form = () => {
   const [email, setEmail] = useState("");
   const [mobileNumber, setMobileNumber] = useState("");
   const [district, setDistrict] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
+
   const navigate = useNavigate();
 
   const user = useSelector((state) => state.user.email);
@@ -23,6 +25,17 @@ const Form = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!sessionType) {
+      setErrorMessage("Please select a session type");
+      return;
+    }
+
+    if (!name || !email || !mobileNumber || !district) {
+      setErrorMessage("Please fill in all the required fields");
+      return;
+    }
+
     try {
       await axios.post(`http://localhost:4000/api/forms${location.pathname}`, {
         user,
@@ -137,6 +150,9 @@ const Form = () => {
             </div>
           </div>
           <input className="" type="submit" value="Submit" />
+          {errorMessage && (
+            <p style={{ color: "red", fontSize: "12px" }}>{errorMessage}</p>
+          )}
         </form>
       </div>
     </div>

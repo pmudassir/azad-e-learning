@@ -8,7 +8,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  
+
   margin: 100px;
   box-shadow: 2px 4px 10px -2px #9a9a9a;
   border-radius: 15px;
@@ -67,6 +67,7 @@
   align-items: center;
   justify-content: center;
   margin: 10px;
+  height: 100%;
 }
 
 .authInputs {
@@ -77,12 +78,10 @@
 }
 
 .authForm {
-  background-color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 0 50px;
   height: 100%;
   text-align: center;
 }
@@ -92,7 +91,33 @@
   border: none;
   padding: 12px 15px;
   margin: 8px 0;
+  padding-inline: 10px;
+  padding-right: 50px;
+  border-radius: 2px;
+  position: relative;
+}
+
+.password-input {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  color: #555;
+  outline: none;
 }
 
 .submitButton {
@@ -118,24 +143,22 @@
   transform: scale(0.95);
 }
 
+@media (max-width: 768px) {
+  .authBox {
+    margin: 20px;
+    flex-direction: column;
+    height: auto;
+  }
 
+  .buttonsContainer {
+    width: 100%;
+  }
 
-@media(max-width:768px){
-.authBox {
-margin: 20px;
-flex-direction: column;
-height: auto;
-}
+  .inputAuthContainer {
+    margin-top: 20px;
+  }
 
-.buttonsContainer{
-  width: 100%;
-}
-
-.inputAuthContainer{
-  margin-top: 20px;
-}
-
-.authInput {
- width:60vw;
-}
+  .authInput {
+    width: 60vw;
+  }
 }

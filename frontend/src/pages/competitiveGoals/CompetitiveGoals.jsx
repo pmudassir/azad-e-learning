@@ -45,6 +45,7 @@ const goalsData = [
 
 const CompetitiveGoals = () => {
   const user = useSelector((state) => state.user.email);
+  const navigate = useNavigate()
 
   const handleEnroll = async (competitive) => {
 const course = {competitive}

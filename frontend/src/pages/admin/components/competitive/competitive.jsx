@@ -12,7 +12,8 @@ const columns = [
     headerName: "Courses",
     width: 300,
     valueGetter: (params) => {
-      const courses = params.row.courses.filter((course) => course.competitive)
+      const courses = params.row.courses
+        .filter((course) => course.competitive)
         .map((course) => course.competitive);
       return courses.join(", ");
     },
