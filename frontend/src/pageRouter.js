@@ -12,6 +12,7 @@ import Admin from "./pages/admin/Admin";
 
 const PageRouter = () => {
   const user = useSelector((state) => state.user.email);
+  const admin = useSelector((state) => state.user.admin);
 
   return (
     <>
@@ -28,7 +29,7 @@ const PageRouter = () => {
             path="/auth"
             element={user ? <Navigate replace to="/" /> : <Auth />}
           />
-          <Route path="/admin" element={<Admin />} />
+          <Route path="/admin" element={admin ? <Admin /> : <Home />} /> 
         </Routes>
       </>
       <Footer />

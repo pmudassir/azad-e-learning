@@ -57,7 +57,6 @@ const Users = () => {
           id: index + 1,
         }));
 
-        console.log(data);
         setUsers(data);
       } catch (error) {
         console.log(error);

@@ -9,8 +9,9 @@ import Avatar from "@mui/material/Avatar";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
-  const user = useSelector((state) => state.user);
-
+  const user = useSelector((state) => state.user.email);
+  const admin = useSelector((state) => state.user.admin);
+  console.log(user, admin);
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -36,18 +37,22 @@ const Navbar = () => {
           <li className="item">About</li>
           <li className="item">Courses</li>
           <li className="item">Contact</li>
+          {admin ? (
+            <Link to="/admin">
+              <li className="item">Admin</li>
+            </Link>
+          ) : null}
         </ul>
         <div className="user">
-          {user.email ? (
+          {user ? (
             <>
               <button onClick={logout} className="authButton">
                 Logout
               </button>
 
               <Avatar sx={{ marginLeft: "10px", backgroundColor: "purple" }}>
-                {user?.email.charAt(0)}
+                {user?.charAt(0)}
               </Avatar>
-
             </>
           ) : (
             <Link to={"/auth"}>

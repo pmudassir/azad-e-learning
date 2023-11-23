@@ -3,8 +3,9 @@ import "./auth.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { addEmail } from "../../store/userSlice";
-
+import { addEmail, verifyAdmin } from "../../store/userSlice";
+import VisibilityIcon from '@mui/icons-material/Visibility';
+import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 
 const Auth = () => {
   const [isSignUp, setIsSignUP] = useState(true);
@@ -12,12 +13,23 @@ const Auth = () => {
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const handleSignUp = async (e) => {
     e.preventDefault();
+
+
+    if (password !== confirmPassword) {
+      setErrorMessage("Passwords does not match");
+      return;
+    }
+
     try {
       const res = await axios.post("http://localhost:4000/api/auth/register", {
         email,
@@ -25,8 +37,8 @@ const Auth = () => {
         password,
       });
 
-      const accessToken = res.data.accessToken
-      axios.defaults.headers.common['Authorization'] = accessToken
+      const accessToken = res.data.accessToken;
+      axios.defaults.headers.common["Authorization"] = accessToken;
       dispatch(addEmail(email));
       navigate("/");
     } catch (error) {
@@ -34,18 +46,27 @@ const Auth = () => {
         setErrorMessage(error.response.data.message);
       }
     }
-  }
+  };
 
   const handleSignIn = async (e) => {
     e.preventDefault();
+
     try {
       const res = await axios.post("http://localhost:4000/api/auth/login", {
         email,
         password,
       });
 
-      const accessToken = res.data.accessToken
-      axios.defaults.headers.common['Authorization'] = accessToken
+      const admin = res.data.user.isAdmin;
+      console.log(admin);
+      if (admin) {
+        console.log("admin is Here!");
+        dispatch(verifyAdmin("true"));
+      }
+
+      const accessToken = res.data.accessToken;
+      axios.defaults.headers.common["Authorization"] = accessToken;
+
       dispatch(addEmail(email));
       navigate("/");
     } catch (error) {
@@ -78,12 +99,22 @@ const Auth = () => {
                   onChange={(e) => setEmail(e.target.value)}
                   required
                 />
-                <input
-                  className="authInput"
-                  type="password"
-                  placeholder="Password"
-                  onChange={(e) => setPassword(e.target.value)}
-                />
+                <div className="password-input">
+                  <input
+                    className="authInput authInput-pass"
+                    type={showPassword ? "text" : "password"}
+                    placeholder="Password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                  />
+                  <button
+                    className="toggle-password"
+                    type="button"
+                    onClick={() => setShowPassword(!showPassword)}
+                  >
+                    {showPassword ? <VisibilityIcon/> : <VisibilityOffIcon/>}
+                  </button>
+                </div>
                 <button
                   className="submitButton"
                   type="submit"
@@ -112,12 +143,39 @@ const Auth = () => {
                   placeholder="Username"
                   onChange={(e) => setUsername(e.target.value)}
                 />
+              <div className="password-input">
+                  <input
+                    className="authInput authInput-pass"
+                    type={showPassword ? "text" : "password"}
+                    placeholder="Password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                  />
+                  <button
+                    className="toggle-password"
+                    type="button"
+                    onClick={() => setShowPassword(!showPassword)}
+                  >
+                    {showPassword ? <VisibilityIcon/> : <VisibilityOffIcon/>}
+                  </button>
+                </div>
+                <div className="password-input">
                 <input
                   className="authInput"
-                  type="password"
-                  placeholder="Password"
-                  onChange={(e) => setPassword(e.target.value)}
+                  type={showConfirmPassword?"text":"password"}
+                  placeholder="Confirm Password"
+                  value={confirmPassword}
+                  onChange={(e) => setConfirmPassword(e.target.value)}
+                  required
                 />
+                 <button
+                    className="toggle-password"
+                    type="button"
+                    onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                  >
+                    {showConfirmPassword ? <VisibilityIcon/> : <VisibilityOffIcon/>}
+                  </button>
+                </div>
                 <button
                   className="submitButton"
                   type="submit"
