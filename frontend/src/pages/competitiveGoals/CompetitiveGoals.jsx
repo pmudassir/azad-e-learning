@@ -47,8 +47,8 @@ const CompetitiveGoals = () => {
 
   const user = useSelector((state) => state.user.email);
 
-  const handleEnroll = async (course) => {
-
+  const handleEnroll = async (competitive) => {
+const course = {competitive}
     try {
       await axios.post("http://localhost:4000/api/course/", { user, course });
     } catch (error) {

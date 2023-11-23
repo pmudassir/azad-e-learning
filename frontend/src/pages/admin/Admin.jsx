@@ -1,12 +1,15 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./admin.css";
 import axios from "axios";
 import { useSelector } from "react-redux";
-import { DataGrid } from "@mui/x-data-grid";
+import Competitive from "./components/competitive/competitive";
+import English from "./components/courses/English";
+import Hindi from "./components/courses/Hindi";
+import Math from "./components/courses/Math";
 
 const columns = [
-  { field: "id", headerName: "ID", width: 70 },
-  { field: "firstName", headerName: "First name", width: 130 },
+  { field: "_id", headerName: "ID", width: 70 },
+  { field: "username", headerName: "First name", width: 130 },
   { field: "courses", headerName: "Courses", width: 130 },
   {
     field: "age",
@@ -34,64 +37,20 @@ const rows = [
 ];
 
 const Admin = () => {
-  useEffect(() => {
-    const getUsers = async () => {
-      try {
-        const res = await axios.get("http://localhost:4000/api/users");
-        console.log(res);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    getUsers();
-  }, []);
 
   return (
     <div style={{ height: "auto", width: "100%" }}>
       <h1 className="adminHeader">Admin Panel</h1>
-      <div className="admin-table">
-        <h3 className="table-header">English</h3>
-        <DataGrid
-          rows={rows}
-          columns={columns}
-          initialState={{
-            pagination: {
-              paginationModel: { page: 0, pageSize: 8 },
-            },
-          }}
-          pageSizeOptions={[5, 10]}
-          checkboxSelection
-        />
-      </div>
-      <div className="admin-table">
-        <h3 className="table-header">Hindi</h3>
-        <DataGrid
-          rows={rows}
-          columns={columns}
-          initialState={{
-            pagination: {
-              paginationModel: { page: 0, pageSize: 8 },
-            },
-          }}
-          pageSizeOptions={[5, 10]}
-          checkboxSelection
-        />
-      </div>
-      <div className="admin-table">
-        <h3 className="table-header">Maths</h3>
-        <DataGrid
-          rows={rows}
-          columns={columns}
-          initialState={{
-            pagination: {
-              paginationModel: { page: 0, pageSize: 8 },
-            },
-          }}
-          pageSizeOptions={[5, 10]}
-          checkboxSelection
-        />
-      </div>
-      <div className="admin-table">
+
+      <h2 className="table-main-header">Competitive Goals</h2>
+     <Competitive /> 
+      <h2 className="table-main-header">Courses</h2>
+      <English />
+      <Hindi />
+      <Math /> 
+     
+     
+      {/* <div className="admin-table">
         <h3 className="table-header">HTTC</h3>
         <DataGrid
           rows={rows}
@@ -202,7 +161,7 @@ const Admin = () => {
           pageSizeOptions={[5, 10]}
           checkboxSelection
         />
-      </div>
+      </div> */}
     </div>
   );
 };
