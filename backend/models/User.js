@@ -21,12 +21,17 @@ const userSchema = new mongoose.Schema(
       type: Boolean,
       default: false,
     },
+    isVerified: {
+      type: Boolean,
+      default: false,
+    },
     courses: {
       type: Array,
     },
     formSubmitted: {
       type: Array,
     },
+    verificationToken: { type: String },
   },
   {
     timestamps: true,

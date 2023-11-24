@@ -2,6 +2,7 @@ const router = require("express").Router();
 const User = require("../models/User");
 const CryptoJS = require("crypto-js");
 const jwt = require("jsonwebtoken");
+const emailVerification = require("../utils/mailer/emailVerification");
 
 // REGISTER
 router.post("/register", async (req, res) => {
@@ -16,6 +17,10 @@ router.post("/register", async (req, res) => {
         .json({ message: "User already exists, try Sign In." });
     }
 
+    const verificationToken = jwt.sign({ email }, process.env.JWT_SECRET, {
+      expiresIn: "1d",
+    });
+
     const newUser = new User({
       email,
       username,
@@ -23,13 +28,40 @@ router.post("/register", async (req, res) => {
     });
 
     const savedUser = await newUser.save();
-    const accessToken = jwt.sign({ userId: savedUser._id }, process.env.JWT_SECRET);
+    const accessToken = jwt.sign(
+      { userId: savedUser._id },
+      process.env.JWT_SECRET
+    );
 
-    
+    await emailVerification({ email, username, verificationToken });
+
     return res.status(200).json({ savedUser, accessToken });
   } catch (err) {
     console.log(err);
     return res.status(500).json(err);
+  }
+});
+
+router.get("/verify/:token", async (req, res) => {
+  const token = req.params.token;
+
+  try {
+    const { email } = jwt.verify(token, process.env.JWT_SECRET);
+    const user = await User.findOne({ email});
+    console.log(user);
+
+    if (!user) {
+      return res.status(404).json({ message: 'Invalid token' });
+    }
+
+    user.isVerified = true;
+    user.verificationToken = undefined;
+    await user.save();
+
+    return res.status(200).json({ message: 'Email verified successfully. You can now log in.' });
+  } catch (error) {
+    console.log(error);
+    return res.status(500).json({ message: 'Error verifying email' });
   }
 });
 
@@ -52,7 +84,6 @@ router.post("/login", async (req, res) => {
       process.env.PASS_SEC
     );
 
-
     const originalPassword = hashedPassword.toString(CryptoJS.enc.Utf8);
 
     if (originalPassword !== password) {
@@ -68,7 +99,6 @@ router.post("/login", async (req, res) => {
       process.env.JWT_SECRET,
       { expiresIn: "3d" }
     );
-
 
     return res.status(200).json({ user, accessToken });
   } catch (err) {
