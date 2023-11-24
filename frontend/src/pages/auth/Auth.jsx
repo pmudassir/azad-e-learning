@@ -4,8 +4,8 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addEmail, verifyAdmin } from "../../store/userSlice";
-import VisibilityIcon from '@mui/icons-material/Visibility';
-import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
+import VisibilityIcon from "@mui/icons-material/Visibility";
+import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 
 const Auth = () => {
   const [isSignUp, setIsSignUP] = useState(true);
@@ -23,7 +23,6 @@ const Auth = () => {
 
   const handleSignUp = async (e) => {
     e.preventDefault();
-
 
     if (password !== confirmPassword) {
       setErrorMessage("Passwords does not match");
@@ -112,7 +111,7 @@ const Auth = () => {
                     type="button"
                     onClick={() => setShowPassword(!showPassword)}
                   >
-                    {showPassword ? <VisibilityIcon/> : <VisibilityOffIcon/>}
+                    {showPassword ? <VisibilityIcon /> : <VisibilityOffIcon />}
                   </button>
                 </div>
                 <button
@@ -143,7 +142,7 @@ const Auth = () => {
                   placeholder="Username"
                   onChange={(e) => setUsername(e.target.value)}
                 />
-              <div className="password-input">
+                <div className="password-input">
                   <input
                     className="authInput authInput-pass"
                     type={showPassword ? "text" : "password"}
@@ -156,24 +155,28 @@ const Auth = () => {
                     type="button"
                     onClick={() => setShowPassword(!showPassword)}
                   >
-                    {showPassword ? <VisibilityIcon/> : <VisibilityOffIcon/>}
+                    {showPassword ? <VisibilityIcon /> : <VisibilityOffIcon />}
                   </button>
                 </div>
                 <div className="password-input">
-                <input
-                  className="authInput"
-                  type={showConfirmPassword?"text":"password"}
-                  placeholder="Confirm Password"
-                  value={confirmPassword}
-                  onChange={(e) => setConfirmPassword(e.target.value)}
-                  required
-                />
-                 <button
+                  <input
+                    className="authInput"
+                    type={showConfirmPassword ? "text" : "password"}
+                    placeholder="Confirm Password"
+                    value={confirmPassword}
+                    onChange={(e) => setConfirmPassword(e.target.value)}
+                    required
+                  />
+                  <button
                     className="toggle-password"
                     type="button"
                     onClick={() => setShowConfirmPassword(!showConfirmPassword)}
                   >
-                    {showConfirmPassword ? <VisibilityIcon/> : <VisibilityOffIcon/>}
+                    {showConfirmPassword ? (
+                      <VisibilityIcon />
+                    ) : (
+                      <VisibilityOffIcon />
+                    )}
                   </button>
                 </div>
                 <button
