@@ -9,35 +9,35 @@ const goalsData = [
   {
     id: 1,
     title: "LSS",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut augue id quam tincidunt efficitur. Donec ligula metus, suscipit quis auctor eget, fringilla ac tellus. Quisque id quam at massa tincidunt lobortis. Curabitur id ipsum porttitor, porta turpis at, accumsan arcu. Sed eu pellentesque turpis.",
+    desc: "Unlocking potentials in young minds, our Lower Secondary Scholarship (LSS) course offers a comprehensive educational journey for students in their critical years of development. Focused on academic excellence, skill enhancement, and fostering a love for learning, LSS paves the way for scholastic success and personal growth in lower secondary education.",
     imgUrl:
       "https://images.unsplash.com/photo-1550592704-6c76defa9985?auto=format&fit=crop&q=60&w=800&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nzh8fHN0dWRlbnR8ZW58MHx8MHx8fDA%3D",
   },
   {
     id: 2,
     title: "NUMATS",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut augue id quam tincidunt efficitur. Donec ligula metus, suscipit quis auctor eget, fringilla ac tellus. Quisque id quam at massa tincidunt lobortis. Curabitur id ipsum porttitor, porta turpis at, accumsan arcu. Sed eu pellentesque turpis.",
+    desc: "Elevate students' mathematical prowess with our tailored program, fostering a deep appreciation for the subject. Through interactive lessons and challenging problem-solving, we empower young minds to excel in mathematics, setting the stage for academic achievement.",
     imgUrl:
       "https://images.unsplash.com/photo-1514369118554-e20d93546b30?auto=format&fit=crop&q=80&w=3870&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 3,
     title: "USS",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut augue id quam tincidunt efficitur. Donec ligula metus, suscipit quis auctor eget, fringilla ac tellus. Quisque id quam at massa tincidunt lobortis. Curabitur id ipsum porttitor, porta turpis at, accumsan arcu. Sed eu pellentesque turpis.",
+    desc: "USS stands as a premier state-level scholarship exam. Our program aims to identify and reward academic excellence, offering students a unique opportunity to showcase their skills, achieve recognition, and embark on a journey towards educational success.",
     imgUrl:
       "https://images.unsplash.com/photo-1529390079861-591de354faf5?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTUxfHxzdHVkZW50c3xlbnwwfHwwfHx8MA%3D%3D",
   },
   {
     id: 4,
     title: "NMMS",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut augue id quam tincidunt efficitur. Donec ligula metus, suscipit quis auctor eget, fringilla ac tellus. Quisque id quam at massa tincidunt lobortis. Curabitur id ipsum porttitor, porta turpis at, accumsan arcu. Sed eu pellentesque turpis.",
+    desc: "Kerala National Means-Cum-Merit Scholarship (NMMS) with our specialized course. We offer comprehensive preparation, including targeted study materials, expert guidance, and practice exams, ensuring students are well-equipped to succeed in this prestigious scholarship program and secure a bright future.",
     imgUrl:
       "https://images.unsplash.com/photo-1630983358494-96012d838b84?auto=format&fit=crop&q=60&w=800&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEwfHx8ZW58MHx8fHx8",
   },
   {
     id: 5,
     title: "NTSE",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut augue id quam tincidunt efficitur. Donec ligula metus, suscipit quis auctor eget, fringilla ac tellus. Quisque id quam at massa tincidunt lobortis. Curabitur id ipsum porttitor, porta turpis at, accumsan arcu. Sed eu pellentesque turpis.",
+    desc: " Gear up for success in the National Talent Search Examination (NTSE), a prestigious national-level scholarship program in India. Our comprehensive course offers strategic guidance, top-notch study materials, and practice assessments, empowering students to excel in this competitive examination and secure a pathway to academic excellence and financial support.",
     imgUrl:
       "https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&q=80&w=3870&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
