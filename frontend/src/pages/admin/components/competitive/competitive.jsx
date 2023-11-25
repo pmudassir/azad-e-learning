@@ -27,7 +27,7 @@ const Competitive = () => {
     const getUsers = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:4000/api/users/competitive"
+          `${process.env.mainURL}/api/users/competitive`
         );
         const data = res.data.map((user, index) => ({
           ...user,

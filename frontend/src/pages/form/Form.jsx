@@ -37,7 +37,7 @@ const Form = () => {
     }
 
     try {
-      await axios.post(`http://localhost:4000/api/forms${location.pathname}`, {
+      await axios.post(`${process.env.mainURL}/api/forms${location.pathname}`, {
         user,
         sessionType,
         name,

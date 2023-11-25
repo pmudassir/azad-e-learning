@@ -26,7 +26,7 @@ const Math = () => {
   useEffect(() => {
     const getUsers = async () => {
       try {
-        const res = await axios.get("http://localhost:4000/api/users/math");
+        const res = await axios.get(`${process.env.mainURL}/api/users/math`);
 
         const data = res.data.map((user, index) => ({
           ...user,

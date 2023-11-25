@@ -31,7 +31,7 @@ const Auth = () => {
     }
 
     try {
-      const res = await axios.post("http://localhost:4000/api/auth/register", {
+      const res = await axios.post(`${process.env.mainURL}/api/auth/register`, {
         email,
         username,
         password,
@@ -58,7 +58,7 @@ const Auth = () => {
     e.preventDefault();
 
     try {
-      const res = await axios.post("http://localhost:4000/api/auth/login", {
+      const res = await axios.post(`${process.env.mainURL}/api/auth/login`, {
         email,
         password,
       });

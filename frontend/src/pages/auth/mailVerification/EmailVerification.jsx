@@ -15,7 +15,7 @@ const EmailVerification = () => {
     const verifying = async () => {
       try {
         const res = await axios.post(
-          `http://localhost:4000/api/auth/verify/${token}`
+          `${process.env.mainURL}/api/auth/verify/${token}`
         );
 
         const email = res.data.user.email;

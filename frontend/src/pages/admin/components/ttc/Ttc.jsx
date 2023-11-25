@@ -74,7 +74,7 @@ const Ttc = () => {
   useEffect(() => {
     const getUsers = async () => {
       try {
-        const res = await axios.get("http://localhost:4000/api/users/ttc");
+        const res = await axios.get(`${process.env.mainURL}/api/users/ttc`);
 
         const data = res.data.map((user, index) => ({
           ...user,

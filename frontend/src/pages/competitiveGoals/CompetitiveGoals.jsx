@@ -51,7 +51,7 @@ const CompetitiveGoals = () => {
 const course = {competitive}
 
     try {
-      await axios.post("http://localhost:4000/api/course/", { user, course });
+      await axios.post(`${process.env.mainURL}/api/course/`, { user, course });
       swal({
         title: "Enrolled!",
         text: "You successfully enrolled to the course!",

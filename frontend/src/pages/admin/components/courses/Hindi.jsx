@@ -27,7 +27,7 @@ const Hindi = () => {
   useEffect(() => {
     const getUsers = async () => {
       try {
-        const res = await axios.get("http://localhost:4000/api/users/hindi");
+        const res = await axios.get(`${process.env.mainURL}/api/users/hindi`);
 
         const data = res.data.map((user, index) => ({
           ...user,

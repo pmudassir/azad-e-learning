@@ -26,7 +26,7 @@ const English = () => {
   useEffect(() => {
     const getUsers = async () => {
       try {
-        const res = await axios.get("http://localhost:4000/api/users/english");
+        const res = await axios.get(`${process.env.mainURL}/api/users/english`);
 
         const data = res.data.map((user, index) => ({
           ...user,
