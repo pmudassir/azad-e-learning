@@ -6,19 +6,22 @@ const ContactUs = () => {
     <div className="contact-us">
       <h1 className="contact-header">Contact Us</h1>
       <div className="contact-container">
-        <div className="contact-element">
-          <div className="contact-icon">
-            <img
-              width="30"
-              height="30"
-              className="contact-icon-img"
-              src="https://img.icons8.com/material-outlined/192/1A1A1A/new-post.png"
-              alt="new-post"
-            />
+        {/* <a href="mailto:"> */}
+          <div className="contact-element">
+            <div className="contact-icon">
+              <img
+                width="30"
+                height="30"
+                className="contact-icon-img"
+                src="https://img.icons8.com/material-outlined/192/1A1A1A/new-post.png"
+                alt="new-post"
+              />
+            </div>
+            <h3>Send Email</h3>
+            <span className="contact-content">azadelearning@gmail.com</span>
           </div>
-          <h3>Send Email</h3>
-          <span className="contact-content">azadelearning@gmail.com</span>
-        </div>
+        {/* </a> */}
+        {/* <a href="tel:+919061562976"> */}
         <div className="contact-element">
           <div className="contact-icon">
             <img
@@ -32,6 +35,7 @@ const ContactUs = () => {
           <h3>Call Us</h3>
           <span className="contact-content">+91 8891405893</span>
         </div>
+        {/* </a> */}
         <div className="contact-element">
           <div className="contact-icon">
             <img

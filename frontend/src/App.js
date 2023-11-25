@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import PageRouter from "./pageRouter";
+import EmailVerification from "./pages/auth/mailVerification/EmailVerification";
 
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
     <>
       <Routes>
         <Route path="/*" element={<PageRouter />} />
+        <Route path="/email-verification/:token" element={<EmailVerification />} /> 
       </Routes>
     </>
   );

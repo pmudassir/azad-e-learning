@@ -44,6 +44,10 @@
         padding: 24px;
         color: #ffffffff;
       }
+      .user {
+        padding-top: 20px;
+        font-weight: 600;
+      }
       .email-footer {
         background-color: #f6f6f6;
         padding: 24px;
@@ -64,29 +68,32 @@
   <body>
     <div class="email-wrapper">
       <div class="email-header">
-        <h1>Welcome to EDuMe</h1>
+        <h1>Welcome to AZAD e-learning</h1>
       </div>
       <div class="email-body">
-        <p>Hello <%= username %>,</p>
+        <p class="user">Hello <%= username %>,</p>
         <p>
-          Thank you for registering with AZAS e-learning To activate your
-          account, please use the following activation Link:
-          <a href="<%=`http://localhost:4000/verify/${verificationToken}` %>"
-            >Click Here</a
-          >
+          Thank you for registering with <b>AZAD e-learning!</b> We're excited
+          to have you on board. To activate your account and start your learning
+          journey, please click the link below:
         </p>
+        <a
+          class="activation-link"
+          href="<%=`http://localhost:3000/email-verification/${verificationToken}` %>"
+          >Activate Your Account
+        </a>
 
+        <p><b>Note:</b> This link is valid for the next 5 minutes.</p>
         <p>
-          Please Click this link above it'll direct you to the page within the
-          next 24 hours.
+          If you didn't sign up for an account on <b>AZAD e-learning</b>, please
+          ignore this email.
         </p>
-
-        <p>If you did not register with EDuMe, please ignore this mail.</p>
       </div>
       <div class="email-footer">
         <p>
-          If you have any questions, please don't hesitate to contact us at
-          <a href="mailto:support@EDuMe.com">support@EDuMe.com</a>
+          If you have any questions or need assistance, feel free to contact our
+          support team at
+          <a href="mailto:azadelearning@gmail.com">support@AZADlearning.com</a>
         </p>
       </div>
     </div>
