@@ -38,7 +38,7 @@ router.post("/register", async (req, res) => {
       process.env.JWT_SECRET
     );
 
-    await emailVerification({ email, username, verificationToken });
+    const emailVerified = await emailVerification({ email, username, verificationToken });
 
     return res.status(200).json({ savedUser, accessToken });
   } catch (err) {
