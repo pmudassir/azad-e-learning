@@ -2,6 +2,7 @@ const router = require("express").Router();
 const User = require("../models/User");
 const CryptoJS = require("crypto-js");
 const jwt = require("jsonwebtoken");
+const validator = require("email-validator");
 const emailVerification = require("../utils/mailer/emailVerification");
 
 // REGISTER
@@ -11,6 +12,10 @@ router.post("/register", async (req, res) => {
 
     const existingUser = await User.findOne({ email });
 
+    if (!validator.validate(email)) {
+      return res.status(400).json({ message: "Enter valid email" });
+    }
+
     if (existingUser) {
       return res
         .status(400)
@@ -18,7 +23,7 @@ router.post("/register", async (req, res) => {
     }
 
     const verificationToken = jwt.sign({ email }, process.env.JWT_SECRET, {
-      expiresIn: "1d",
+      expiresIn: "30m",
     });
 
     const newUser = new User({
@@ -42,26 +47,30 @@ router.post("/register", async (req, res) => {
   }
 });
 
-router.get("/verify/:token", async (req, res) => {
+// VERIFYING
+router.post("/verify/:token", async (req, res) => {
   const token = req.params.token;
 
   try {
     const { email } = jwt.verify(token, process.env.JWT_SECRET);
-    const user = await User.findOne({ email});
-    console.log(user);
+    const user = await User.findOne({ email });
 
     if (!user) {
-      return res.status(404).json({ message: 'Invalid token' });
+      return res.status(404).json({ message: "Invalid user" });
     }
 
     user.isVerified = true;
-    user.verificationToken = undefined;
+    user.verificationToken = null;
     await user.save();
 
-    return res.status(200).json({ message: 'Email verified successfully. You can now log in.' });
+    const verifyToken = jwt.sign({ email }, process.env.JWT_SECRET, {
+      expiresIn: "5m",
+    });
+
+    return res.status(200).json({ user, verifyToken, success: true });
   } catch (error) {
     console.log(error);
-    return res.status(500).json({ message: 'Error verifying email' });
+    return res.status(500).json({ message: "Error verifying email" });
   }
 });
 
@@ -69,6 +78,10 @@ router.get("/verify/:token", async (req, res) => {
 router.post("/login", async (req, res) => {
   try {
     const { email, password } = req.body;
+
+    if (!validator.validate(email)) {
+      res.status(400).json({ message: "Enter valid email" });
+    }
 
     const user = await User.findOne({ email });
 

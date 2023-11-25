@@ -6,6 +6,7 @@ import { useDispatch } from "react-redux";
 import { addEmail, verifyAdmin } from "../../store/userSlice";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
+import swal from "sweetalert";
 
 const Auth = () => {
   const [isSignUp, setIsSignUP] = useState(true);
@@ -38,7 +39,13 @@ const Auth = () => {
 
       const accessToken = res.data.accessToken;
       axios.defaults.headers.common["Authorization"] = accessToken;
-      dispatch(addEmail(email));
+
+      swal({
+        title: "Mail sent!",
+        text: "Check your email for verification!",
+        icon: "info",
+        button: "Done!",
+      });
       navigate("/");
     } catch (error) {
       if (error.response) {

@@ -1,6 +1,6 @@
 const nodeMailer = require("nodemailer");
 const ejs = require("ejs");
-const path = require('path');
+const path = require("path");
 
 const emailVerification = async ({ email, username, verificationToken }) => {
   const transporter = nodeMailer.createTransport({
@@ -10,25 +10,23 @@ const emailVerification = async ({ email, username, verificationToken }) => {
       pass: process.env.SMTP_PASSWORD,
     },
   });
-  const templatePath = path.join(__dirname, 'activation-mail.ejs');
-  
+  const templatePath = path.join(__dirname, "activation-mail.ejs");
+
   const templateData = {
-      username: username,
-      verificationToken: verificationToken,
-    };
-    
-    console.log(templateData);
+    username: username,
+    verificationToken: verificationToken,
+  };
+
   const template = await ejs.renderFile(templatePath, templateData);
 
   const mailOptions = {
     from: process.env.SMTP_MAIL,
     to: email,
     subject: "Email Verification",
-    html:template,
+    html: template,
   };
 
   await transporter.sendMail(mailOptions);
-  console.log("mail sent success");
 };
 
 module.exports = emailVerification;

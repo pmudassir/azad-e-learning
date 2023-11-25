@@ -11,7 +11,6 @@ const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   const user = useSelector((state) => state.user.email);
   const admin = useSelector((state) => state.user.admin);
-  console.log(user, admin);
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
