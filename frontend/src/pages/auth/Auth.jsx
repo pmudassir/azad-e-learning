@@ -87,10 +87,10 @@ const Auth = () => {
       <div className="authBox">
         <div className="buttonsContainer">
           <button className="authButtons" onClick={() => setIsSignUP(true)}>
-            Sign In
+            Log In
           </button>
           <button className="authButtons" onClick={() => setIsSignUP(false)}>
-            Sign Up
+            Register
           </button>
         </div>
         <div className="inputAuthContainer">
@@ -126,7 +126,7 @@ const Auth = () => {
                   type="submit"
                   onClick={handleSignIn}
                 >
-                  Sign In
+                  Login In
                 </button>
               </form>
               {errorMessage && (
@@ -191,7 +191,7 @@ const Auth = () => {
                   type="submit"
                   onClick={handleSignUp}
                 >
-                  Sign Up
+                  Register
                 </button>
                 {errorMessage && (
                   <p style={{ color: "red", fontSize: "12px" }}>
