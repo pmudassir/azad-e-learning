@@ -7,6 +7,7 @@ import { addEmail, verifyAdmin } from "../../store/userSlice";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import swal from "sweetalert";
+import { mainURL } from "../../data.js";
 
 const Auth = () => {
   const [isSignUp, setIsSignUP] = useState(true);
@@ -24,14 +25,13 @@ const Auth = () => {
 
   const handleSignUp = async (e) => {
     e.preventDefault();
-
     if (password !== confirmPassword) {
       setErrorMessage("Passwords does not match");
       return;
     }
 
     try {
-      const res = await axios.post(`${process.env.mainURL}/api/auth/register`, {
+      const res = await axios.post(`${mainURL}/api/auth/register`, {
         email,
         username,
         password,
@@ -58,7 +58,7 @@ const Auth = () => {
     e.preventDefault();
 
     try {
-      const res = await axios.post(`${process.env.mainURL}/api/auth/login`, {
+      const res = await axios.post(`${mainURL}/api/auth/login`, {
         email,
         password,
       });

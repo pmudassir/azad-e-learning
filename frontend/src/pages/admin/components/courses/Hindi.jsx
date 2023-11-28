@@ -2,6 +2,8 @@ import React from "react";
 import { DataGrid } from "@mui/x-data-grid";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { mainURL } from "../../../../data.js";
+
 
 const columns = [
   { field: "id", headerName: "ID", width: 70 },
@@ -27,7 +29,7 @@ const Hindi = () => {
   useEffect(() => {
     const getUsers = async () => {
       try {
-        const res = await axios.get(`${process.env.mainURL}/api/users/hindi`);
+        const res = await axios.get(`${mainURL}/api/users/hindi`);
 
         const data = res.data.map((user, index) => ({
           ...user,

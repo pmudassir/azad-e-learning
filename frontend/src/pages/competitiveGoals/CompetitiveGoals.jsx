@@ -4,6 +4,8 @@ import { useSelector } from "react-redux";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import swal from 'sweetalert';
+import { mainURL } from "../../data";
+
 
 const goalsData = [
   {
@@ -51,7 +53,7 @@ const CompetitiveGoals = () => {
 const course = {competitive}
 
     try {
-      await axios.post(`${process.env.mainURL}/api/course/`, { user, course });
+      await axios.post(`${mainURL}/api/course/`, { user, course });
       swal({
         title: "Enrolled!",
         text: "You successfully enrolled to the course!",

@@ -30,7 +30,7 @@ app.use("/api/forms", formsRoute);
 app.use("/api/course", courseRoute);
 app.use("/api/users", userRoute)
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
   console.log(`Server started on port ${PORT}`);
 });

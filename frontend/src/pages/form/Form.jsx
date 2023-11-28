@@ -4,6 +4,8 @@ import { useSelector } from "react-redux";
 import axios from "axios";
 import { useLocation, useNavigate } from "react-router-dom";
 import swal from "sweetalert";
+import { mainURL } from "../../data";
+
 
 const Form = () => {
   const [sessionType, setSessionType] = useState("");
@@ -37,7 +39,7 @@ const Form = () => {
     }
 
     try {
-      await axios.post(`${process.env.mainURL}/api/forms${location.pathname}`, {
+      await axios.post(`${mainURL}/api/forms${location.pathname}`, {
         user,
         sessionType,
         name,

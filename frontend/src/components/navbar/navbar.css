@@ -99,6 +99,11 @@
   font-size: 22px;
 }
 
+.nav-links{
+  text-decoration: none;
+  color: white;
+}
+
 @media (max-width: 768px) {
   .wrapper {
     width: 100%;

@@ -105,3 +105,5 @@ export const cardData = [
             "https://img.icons8.com/external-goofy-flat-kerismaker/192/external-Goals-business-goofy-flat-kerismaker.png",
     },
 ];
+
+export const mainURL = "http://18.118.49.23:4000"
