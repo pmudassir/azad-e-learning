@@ -1,9 +1,10 @@
 import React from "react";
 import "./course.css";
-import { courseData } from "../../data";
+import { courseData, mainURL } from "../../data";
 import axios from "axios";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+
 
 const Course = () => {
   const navigate = useNavigate();
@@ -13,7 +14,7 @@ const Course = () => {
   const handleEnroll = async (subject, level) => {
     const course = { [subject]: { level } };
     try {
-      await axios.post(`${process.env.mainURL}/api/course/`, { user, course });
+      await axios.post(`${mainURL}/api/course/`, { user, course });
     } catch (error) {
       console.log(error);
     }

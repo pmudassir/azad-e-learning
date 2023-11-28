@@ -58,6 +58,7 @@ label {
 .inputEmailForm,
 .inputTelForm,
 select {
+  margin: 20px;
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;

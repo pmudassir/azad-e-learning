@@ -4,6 +4,8 @@ import { useDispatch } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 import swal from "sweetalert";
 import { addEmail } from "../../../store/userSlice";
+import { mainURL } from "../../../data.js";
+
 
 const EmailVerification = () => {
   const { token } = useParams();
@@ -15,7 +17,7 @@ const EmailVerification = () => {
     const verifying = async () => {
       try {
         const res = await axios.post(
-          `${process.env.mainURL}/api/auth/verify/${token}`
+          `${mainURL}/api/auth/verify/${token}`
         );
 
         const email = res.data.user.email;

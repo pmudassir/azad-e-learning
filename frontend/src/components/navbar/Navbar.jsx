@@ -33,9 +33,15 @@ const Navbar = () => {
       </div>
       <div className={`link-section ${showMenu ? "show" : ""}`}>
         <ul className="menu">
-          <li className="item">About</li>
-          <li className="item">Courses</li>
-          <li className="item">Contact</li>
+          <li className="item" >
+           <a className="nav-links" href="#about"> About</a>
+          </li>
+          <li className="item" >
+            <a className="nav-links" href="#courses">Courses</a>
+          </li>
+          <li className="item" >
+            <a className="nav-links" href="#contact">Contact</a>
+          </li>
           {admin ? (
             <Link to="/admin">
               <li className="item">Admin</li>

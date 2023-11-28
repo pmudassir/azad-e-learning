@@ -2,6 +2,8 @@ import { DataGrid } from "@mui/x-data-grid";
 import "../../admin.css";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { mainURL } from "../../../../data.js";
+
 
 const columns = [
   { field: "id", headerName: "ID", width: 70 },
@@ -27,7 +29,7 @@ const Competitive = () => {
     const getUsers = async () => {
       try {
         const res = await axios.get(
-          `${process.env.mainURL}/api/users/competitive`
+          `${mainURL}/api/users/competitive`
         );
         const data = res.data.map((user, index) => ({
           ...user,
