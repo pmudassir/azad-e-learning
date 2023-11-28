@@ -6,7 +6,7 @@ const ContactUs = () => {
     <div className="contact-us" id="contact">
       <h1 className="contact-header">Contact Us</h1>
       <div className="contact-container">
-        {/* <a href="mailto:"> */}
+        <a href="mailto:">
           <div className="contact-element">
             <div className="contact-icon">
               <img
@@ -20,8 +20,8 @@ const ContactUs = () => {
             <h3>Send Email</h3>
             <span className="contact-content">azadelearning@gmail.com</span>
           </div>
-        {/* </a> */}
-        {/* <a href="tel:+919061562976"> */}
+        </a>
+        <a href="tel:+919061562976">
         <div className="contact-element">
           <div className="contact-icon">
             <img
@@ -35,7 +35,8 @@ const ContactUs = () => {
           <h3>Call Us</h3>
           <span className="contact-content">+91 8891405893</span>
         </div>
-        {/* </a> */}
+        </a>
+        <a href="https://maps.app.goo.gl/9ecAD6iwrxHP5Rte9" >
         <div className="contact-element">
           <div className="contact-icon">
             <img
@@ -49,6 +50,7 @@ const ContactUs = () => {
           <h3>Address</h3>
           <span className="contact-content">Malappuram,kerala</span>
         </div>
+        </a>
       </div>
     </div>
   );
