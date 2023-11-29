@@ -59,10 +59,6 @@
   font-size: 16px;
 }
 
-.item:hover {
-  color: #58a85f;
-}
-
 .user {
   display: flex;
   align-items: center;
@@ -99,9 +95,13 @@
   font-size: 22px;
 }
 
-.nav-links{
+.nav-links {
   text-decoration: none;
   color: white;
+}
+
+.nav-links:hover {
+  color: #58a85f;
 }
 
 @media (max-width: 768px) {
