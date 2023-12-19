@@ -20,7 +20,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="navbar">
+    <section className="navbar">
       <div className="wrapper">
         <Link to={"/"}>
           <div className="icon">
@@ -66,7 +66,7 @@ const Navbar = () => {
           )}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
