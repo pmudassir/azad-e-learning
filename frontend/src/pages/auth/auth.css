@@ -144,6 +144,9 @@
 }
 
 @media (max-width: 768px) {
+  .authContainer {
+    margin-top: 100px;
+  }
   .authBox {
     margin: 20px;
     flex-direction: column;

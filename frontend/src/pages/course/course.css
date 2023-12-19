@@ -127,6 +127,9 @@ svg {
 }
 
 @media (max-width: 768px) {
+  .courseContainers {
+    margin-top: 100px;
+  }
   .courseContainer {
     display: flex;
     align-items: center;

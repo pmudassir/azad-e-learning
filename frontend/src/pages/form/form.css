@@ -52,7 +52,7 @@ h4 {
 }
 
 label {
-  font-weight: bold;;
+  font-weight: bold;
 }
 
 .inputTextForm,
@@ -92,6 +92,9 @@ span {
 }
 
 @media (max-width: 768px) {
+  .formContainer {
+    margin-top: 120px;
+  }
   .detailItems {
     display: flex;
     align-items: center;
