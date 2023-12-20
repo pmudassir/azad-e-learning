@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 100px;
 }
 
 .authBox {
@@ -144,9 +145,6 @@
 }
 
 @media (max-width: 768px) {
-  .authContainer {
-    margin-top: 100px;
-  }
   .authBox {
     margin: 20px;
     flex-direction: column;

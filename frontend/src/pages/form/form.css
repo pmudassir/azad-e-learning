@@ -6,6 +6,7 @@
   padding: 20px;
   display: flex;
   justify-content: center;
+  margin-top: 120px;
 }
 
 .formItem {
@@ -92,9 +93,6 @@ span {
 }
 
 @media (max-width: 768px) {
-  .formContainer {
-    margin-top: 120px;
-  }
   .detailItems {
     display: flex;
     align-items: center;

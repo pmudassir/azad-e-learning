@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  margin-top: 50px;
+  margin-top: 150px;
 }
 
 .header {
@@ -127,9 +127,6 @@ svg {
 }
 
 @media (max-width: 768px) {
-  .courseContainers {
-    margin-top: 100px;
-  }
   .courseContainer {
     display: flex;
     align-items: center;
